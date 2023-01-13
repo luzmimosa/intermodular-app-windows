@@ -44,11 +44,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Senka\\Desktop\\Repo Intermodular Desktop APP\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
+      "projectUniqueName": "C:\\Users\\Senka\\Desktop\\Git_Intermodular_WPF\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
       "projectName": "TestApp_Intermodular",
-      "projectPath": "C:\\Users\\Senka\\Desktop\\Repo Intermodular Desktop APP\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
+      "projectPath": "C:\\Users\\Senka\\Desktop\\Git_Intermodular_WPF\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
       "packagesPath": "C:\\Users\\Senka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Senka\\Desktop\\Repo Intermodular Desktop APP\\TestApp_Intermodular\\TestApp_Intermodular\\obj\\",
+      "outputPath": "C:\\Users\\Senka\\Desktop\\Git_Intermodular_WPF\\TestApp_Intermodular\\TestApp_Intermodular\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Senka\\AppData\\Roaming\\NuGet\\NuGet.Config",

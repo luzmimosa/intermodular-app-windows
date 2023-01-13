@@ -20,9 +20,24 @@ namespace TestApp_Intermodular
     /// </summary>
     public partial class MainWindow : Window
     {
+        //private bool isLogged = false;
+        //RadioButton inicioButton = this.FindName("Inicio") as RadioButton;
+        //if (inicioButton != null && !isLogged)
+        //{
+        //    inicioButton.Visibility = Visibility.Collapsed;
+        //}
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

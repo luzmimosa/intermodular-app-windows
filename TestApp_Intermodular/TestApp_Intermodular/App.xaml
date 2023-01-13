@@ -15,11 +15,24 @@
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
             </DataTemplate>
-            
+
+            <DataTemplate DataType="{x:Type viewModel:LogInViewModel}">
+                <view:LogInView/>
+            </DataTemplate>
+
             <DataTemplate DataType="{x:Type viewModel:DiscoveryViewModel}">
                 <view:DiscoveryView/>
             </DataTemplate>
-            
+
+            <DataTemplate DataType="{x:Type viewModel:ProfileViewModel}">
+                <view:ProfileView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:FavoritesViewModel}">
+                <view:FavoritesView/>
+            </DataTemplate>
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

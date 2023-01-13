@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\
 TestApp_Intermodular
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\App.xaml
-5-334153495
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\App.xaml
+8-1786566999
 
-10487327706
+16-69290423
 204954006825
-MainWindow.xaml;MVVM\View\DiscoveryView.xaml;MVVM\View\HomeView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextBoxTheme.xaml;
+MainWindow.xaml;MVVM\View\DiscoveryView.xaml;MVVM\View\FavoritesView.xaml;MVVM\View\HomeView.xaml;MVVM\View\LogInView.xaml;MVVM\View\ProfileView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextBoxTheme.xaml;
 
 False
 

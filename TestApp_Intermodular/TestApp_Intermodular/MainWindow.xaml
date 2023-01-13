@@ -18,6 +18,8 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
+
+
     <Border Background="#036D19"
                 CornerRadius="20">
         <Grid>
@@ -39,6 +41,14 @@
                        FontSize="22"/>
 
             <StackPanel Grid.Row="1">
+                <RadioButton x:Name="Entrar" 
+                             Content="Iniciar sesión"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding LogInViewCommand}"/>
+                
                 <RadioButton Content="Inicio"
                              Name="Inicio"
                              Height="50"
@@ -47,6 +57,7 @@
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
+                
                 <RadioButton Content="Mapa"
                              Name="Mapa"
                              Height="50"
@@ -54,25 +65,70 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding DiscoveryViewCommand}"/>
+
                 <RadioButton x:Name="Favoritos" 
                              Content="Favoritos"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding FavoritesViewCommand}"/>
+
                 <RadioButton x:Name="Perfil" 
                              Content="Perfil"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding ProfileViewCommand}"/>
+
                 <RadioButton x:Name="Salir" 
-                             Content="Salir"
+                             Content="Cerrar sesión"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
+
+            <Button Content="Minimizar" 
+                    Click="MinimizeButton_Click"
+                    Background="#036D19"
+                    Width="80" 
+                    Height="25"
+                    Grid.Column="1"
+                    Foreground="White"
+                    FontSize="14"
+                    VerticalContentAlignment="Center"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,100,0"/>
+            
+            <Button Content="Cerrar" 
+                    Click="CloseButton_Click"
+                    Background="#da2927"
+                    Width="80" 
+                    Height="25"
+                    Grid.Column="1"
+                    Foreground="White"
+                    FontSize="14"
+                    VerticalContentAlignment="Center"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,20,0"/>
+
+            
+            <!--<Button Content="Simulacro" 
+                    Click="Simulacro_Click"
+                    Background="#da2927"
+                    Width="80" 
+                    Height="25"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Foreground="White"
+                    FontSize="14"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Margin="0,150,0,0"/>-->
 
             <TextBox Width="250"
                      Height="40"
