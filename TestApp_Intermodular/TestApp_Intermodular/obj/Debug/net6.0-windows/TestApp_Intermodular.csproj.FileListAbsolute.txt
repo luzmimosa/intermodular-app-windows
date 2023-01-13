@@ -1,0 +1,122 @@
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.exe
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.deps.json
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.runtimeconfig.json
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.dll
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.pdb
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.AssemblyReference.cache
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular_MarkupCompile.cache
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular_MarkupCompile.lref
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.g.resources
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.AssemblyInfoInputs.cache
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.AssemblyInfo.cs
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.CoreCompileInputs.cache
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.CopyComplete
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.dll
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\refint\TestApp_Intermodular.dll
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.pdb
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.genruntimeconfig.cache
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\ref\TestApp_Intermodular.dll
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\App.baml
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\TextBoxTheme.baml
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\sergi\source\repos\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.exe
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.deps.json
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.runtimeconfig.json
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.dll
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.pdb
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\TextBoxTheme.baml
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular_MarkupCompile.cache
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular_MarkupCompile.lref
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\App.baml
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.g.resources
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.AssemblyInfoInputs.cache
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.AssemblyInfo.cs
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.CopyComplete
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.dll
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\refint\TestApp_Intermodular.dll
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.pdb
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.genruntimeconfig.cache
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\ref\TestApp_Intermodular.dll
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.g.cs
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.exe
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.deps.json
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.runtimeconfig.json
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.dll
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.pdb
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.AssemblyReference.cache
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\TextBoxTheme.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.g.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular_MarkupCompile.cache
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular_MarkupCompile.lref
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\App.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.g.resources
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.AssemblyInfoInputs.cache
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.AssemblyInfo.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.CoreCompileInputs.cache
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.CopyComplete
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.dll
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\refint\TestApp_Intermodular.dll
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.pdb
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.genruntimeconfig.cache
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\intermodular-app-windows-main\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\ref\TestApp_Intermodular.dll
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.exe
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.deps.json
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.runtimeconfig.json
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.dll
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\TestApp_Intermodular.pdb
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.AssemblyReference.cache
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\TextBoxTheme.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.g.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular_MarkupCompile.cache
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular_MarkupCompile.lref
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\App.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.g.resources
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.AssemblyInfoInputs.cache
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.AssemblyInfo.cs
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.CoreCompileInputs.cache
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.csproj.CopyComplete
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.dll
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\refint\TestApp_Intermodular.dll
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.pdb
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.genruntimeconfig.cache
+C:\Users\Senka\Desktop\Repo Intermodular Desktop APP\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\ref\TestApp_Intermodular.dll

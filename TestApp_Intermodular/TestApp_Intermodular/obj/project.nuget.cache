@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "x+xWuHQ9QVSopQrHUswZeD9ztNkSCq/AOmTu74ugyTDJl2dd3lial6XAAkdOPU29k4h6BMr8Y07c/J6ZsfNwIg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Senka\\Desktop\\Repo Intermodular Desktop APP\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Senka\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,20 @@
+﻿TestApp_Intermodular
+
+
+winexe
+C#
+.cs
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\obj\Release\net6.0-windows\
+TestApp_Intermodular
+none
+false
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+C:\Users\sergi\Desktop\Repos GIT\TestApp_Intermodular\TestApp_Intermodular\App.xaml
+4-1448662688
+
+8-2096597805
+204-378694113
+MainWindow.xaml;MVVM\View\HomeView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextBoxTheme.xaml;
+
+True
+

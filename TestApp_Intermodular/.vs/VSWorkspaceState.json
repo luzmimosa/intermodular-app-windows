@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TestApp_Intermodular",
+    "\\TestApp_Intermodular\\MVVM",
+    "\\TestApp_Intermodular\\MVVM\\ViewModel",
+    "\\TestApp_Intermodular\\Theme"
+  ],
+  "SelectedNode": "\\TestApp_Intermodular\\Theme\\TextBoxTheme.xaml",
+  "PreviewInSolutionExplorer": false
+}
