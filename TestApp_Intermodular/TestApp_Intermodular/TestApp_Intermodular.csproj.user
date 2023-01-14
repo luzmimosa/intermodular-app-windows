@@ -45,6 +45,9 @@
     <Page Update="Theme\MenuButtonTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Theme\RoundTextboxTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Theme\TextBoxTheme.xaml">
       <SubType>Designer</SubType>
     </Page>

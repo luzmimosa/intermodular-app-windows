@@ -6,8 +6,93 @@
              xmlns:local="clr-namespace:TestApp_Intermodular.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="ForestGreen">
-    <Grid>
-            
-    </Grid>
+             Background="Transparent">
+    <StackPanel>
+        <Border 
+            Width="400"
+            Height="350"
+            Background="#036D19"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            CornerRadius="10">
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Image Source="C:\Users\sergi\Desktop\Intermodular-WPF\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\Images\honk.jpg" 
+                           Width="50" 
+                           Height="50" 
+                           VerticalAlignment="Center"/>
+
+                    <Label Content="Wikiloc - Intermodular" 
+                           FontWeight="Bold" 
+                           Foreground="White" 
+                            VerticalAlignment="Center" 
+                           Margin="10,0,0,0"/>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="Usuario:" 
+                           Foreground="White" 
+                           VerticalAlignment="Center"/>
+                    
+                    <TextBox x:Name="tb_email" 
+                             Width="150" 
+                             Height="25" 
+                             Margin="5,0,0,0"/>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="Contraseña:" 
+                           Foreground="White" 
+                           VerticalAlignment="Center"/>
+
+                    <PasswordBox x:Name="tb_password" 
+                                 Width="150" 
+                                 Height="25" 
+                                 Margin="5,0,0,0">
+                        <PasswordBox.Template>
+                            <ControlTemplate TargetType="{x:Type PasswordBox}">
+                                <Border CornerRadius="10" 
+                                        BorderBrush="#2c2c2c" 
+                                        BorderThickness="1"
+                                        Background="White">
+                                    <ScrollViewer x:Name="PART_ContentHost" />
+                                </Border>
+                            </ControlTemplate>
+                        </PasswordBox.Template>
+
+                    </PasswordBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock>
+                        <Hyperlink RequestNavigate="Hyperlink_RequestNavigate"
+                                   NavigateUri="https://yourwebsite.com/forgotpassword"
+                                   Foreground="White"
+                                   >Recuperar contraseña
+                        </Hyperlink>
+                    </TextBlock>
+                    
+                    <TextBlock Margin="5,0,5,0"
+                               Foreground="White"
+                               >|
+                    </TextBlock>
+                    
+                    <TextBlock>
+                        <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" 
+                                   NavigateUri="https://yourwebsite.com/register"
+                                   Foreground="White"
+                                   >Registrarse
+                        </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+
+            </StackPanel>
+        </Border>
+    </StackPanel>
+
+
+
+
 </UserControl>
