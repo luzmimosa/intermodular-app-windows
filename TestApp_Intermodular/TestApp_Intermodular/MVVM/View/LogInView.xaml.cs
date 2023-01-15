@@ -24,5 +24,17 @@ namespace TestApp_Intermodular.MVVM.View
         {
             InitializeComponent();
         }
+        private void Password_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            // Your code here
+        }
+        private void Register_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            // Your code here
+        }
+        private void LogginButton_Click(object sender, RoutedEventArgs e)
+        {
+          
+        }
     }
 }

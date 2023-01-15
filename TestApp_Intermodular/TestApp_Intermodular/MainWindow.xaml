@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:TestApp_Intermodular"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="600" 
+        Height="550" 
         Width="920"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -41,28 +41,30 @@
                        FontSize="22"/>
 
             <StackPanel Grid.Row="1">
-                <RadioButton x:Name="Entrar" 
+                <RadioButton x:Name="login" 
                              Content="Iniciar sesión"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
+                             Visibility="Visible"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding LogInViewCommand}"/>
                 
                 <RadioButton Content="Inicio"
-                             Name="Inicio"
+                             x:Name="Inicio"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
+                             Visibility="Collapsed"
                              Style="{StaticResource MenuButtonTheme}"
-                             IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
                 
                 <RadioButton Content="Mapa"
-                             Name="Mapa"
+                             x:Name="Mapa"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
+                             Visibility="Collapsed"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding DiscoveryViewCommand}"/>
 
@@ -71,6 +73,7 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
+                             Visibility="Collapsed"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding FavoritesViewCommand}"/>
 
@@ -79,6 +82,7 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
+                             Visibility="Collapsed"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding ProfileViewCommand}"/>
 
@@ -87,6 +91,7 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
+                             Visibility="Collapsed"
                              Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
 
@@ -105,7 +110,7 @@
             
             <Button Content="Cerrar" 
                     Click="CloseButton_Click"
-                    Background="#da2927"
+                    Background="#005b12"
                     Width="80" 
                     Height="25"
                     Grid.Column="1"
@@ -117,7 +122,7 @@
                     Margin="0,0,20,0"/>
 
             
-            <!--<Button Content="Simulacro" 
+            <Button Content="Simulacro" 
                     Click="Simulacro_Click"
                     Background="#da2927"
                     Width="80" 
@@ -128,7 +133,7 @@
                     FontSize="14"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
-                    Margin="0,150,0,0"/>-->
+                    Margin="0,150,0,0"/>
 
             <TextBox Width="250"
                      Height="40"

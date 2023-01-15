@@ -9,48 +9,60 @@
              Background="Transparent">
     <StackPanel>
         <Border 
-            Width="400"
-            Height="350"
-            Background="#036D19"
-            VerticalAlignment="Stretch"
-            HorizontalAlignment="Stretch"
+            Width="Auto"
+            Height="Auto"
+            Background="#005b12"
             CornerRadius="10">
             <StackPanel Orientation="Vertical"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center">
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                    <Image Source="C:\Users\sergi\Desktop\Intermodular-WPF\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\Images\honk.jpg" 
-                           Width="50" 
-                           Height="50" 
-                           VerticalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" 
+                            Margin="0,15,0,5"
+                            VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
 
+                    <Image Source="C:\Users\sergi\Desktop\Intermodular-WPF\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\Images\honk.jpg" 
+                           Width="200" 
+                           Height="200" 
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel>
                     <Label Content="Wikiloc - Intermodular" 
                            FontWeight="Bold" 
-                           Foreground="White" 
-                            VerticalAlignment="Center" 
+                           Foreground="White"
+                           FontSize="24"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
                            Margin="10,0,0,0"/>
                 </StackPanel>
-                
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                    <Label Content="Usuario:" 
-                           Foreground="White" 
-                           VerticalAlignment="Center"/>
-                    
-                    <TextBox x:Name="tb_email" 
-                             Width="150" 
-                             Height="25" 
-                             Margin="5,0,0,0"/>
-                </StackPanel>
-                
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                    <Label Content="Contraseña:" 
-                           Foreground="White" 
-                           VerticalAlignment="Center"/>
 
+                <StackPanel>
+                    <Label Content="Usuario" 
+                           Foreground="White"
+                           FontSize="18"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBox x:Name="tb_email" 
+                             Width="250" 
+                             Height="25"/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Contraseña" 
+                           Foreground="White"
+                           FontSize="18"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel>
                     <PasswordBox x:Name="tb_password" 
-                                 Width="150" 
-                                 Height="25" 
-                                 Margin="5,0,0,0">
+                                 Width="250" 
+                                 Height="25">
                         <PasswordBox.Template>
                             <ControlTemplate TargetType="{x:Type PasswordBox}">
                                 <Border CornerRadius="10" 
@@ -61,38 +73,58 @@
                                 </Border>
                             </ControlTemplate>
                         </PasswordBox.Template>
-
                     </PasswordBox>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                    <TextBlock>
-                        <Hyperlink RequestNavigate="Hyperlink_RequestNavigate"
-                                   NavigateUri="https://yourwebsite.com/forgotpassword"
-                                   Foreground="White"
-                                   >Recuperar contraseña
-                        </Hyperlink>
-                    </TextBlock>
-                    
-                    <TextBlock Margin="5,0,5,0"
-                               Foreground="White"
-                               >|
-                    </TextBlock>
-                    
-                    <TextBlock>
-                        <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" 
-                                   NavigateUri="https://yourwebsite.com/register"
-                                   Foreground="White"
-                                   >Registrarse
-                        </Hyperlink>
-                    </TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="15,0,0,10">
+                    <TextBlock Text="Recuperar contraseña" 
+                       Foreground="White"
+                       FontSize="14"
+                       VerticalAlignment="Center"
+                       TextDecorations="Underline"
+                       MouseDown="Password_MouseDown"/>
+
+                    <TextBlock Text="|" 
+                       Foreground="White"
+                       FontSize="14"
+                       VerticalAlignment="Center"
+                       Margin="5,0,5,0"/>
+
+                    <TextBlock Text="Registrarse" 
+                       Foreground="White"
+                       FontSize="14"
+                       VerticalAlignment="Center"
+                       TextDecorations="Underline"
+                       MouseDown="Register_MouseDown"/>
                 </StackPanel>
 
+                <StackPanel>
+                    <Button Content="Log in"
+                        Width="100"
+                        Height="30"
+                        Margin="0,0,0,10"
+                        BorderThickness="2"
+                        BorderBrush="White"
+                        Background="#036D19"
+                        Foreground="White"
+                        FontSize="14"
+                        Click="LogginButton_Click">
+                        
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border CornerRadius="5"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      RecognizesAccessKey="True"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
             </StackPanel>
         </Border>
     </StackPanel>
-
-
-
-
 </UserControl>
