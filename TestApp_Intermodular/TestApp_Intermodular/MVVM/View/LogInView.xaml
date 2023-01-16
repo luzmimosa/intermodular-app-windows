@@ -21,7 +21,7 @@
                             VerticalAlignment="Center"
                         HorizontalAlignment="Center">
 
-                    <Image Source="C:\Users\sergi\Desktop\Intermodular-WPF\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\Images\honk.jpg" 
+                    <Image Source="\Images\honk.jpg" 
                            Width="200" 
                            Height="200" 
                            VerticalAlignment="Center"

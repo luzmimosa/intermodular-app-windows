@@ -195,3 +195,4 @@ C:\Users\sergi\Desktop\Intermodular-WPF\intermodular-app-windows\TestApp_Intermo
 C:\Users\sergi\Desktop\Intermodular-WPF\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.pdb
 C:\Users\sergi\Desktop\Intermodular-WPF\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.genruntimeconfig.cache
 C:\Users\sergi\Desktop\Intermodular-WPF\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\ref\TestApp_Intermodular.dll
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\RoundTextboxTheme.baml

@@ -6,8 +6,13 @@
              xmlns:local="clr-namespace:TestApp_Intermodular.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="#005b12">
+             Background="Transparent">
     <Grid>
-            
+        <StackPanel>
+            <WebBrowser Name="webBrowser" 
+                    Source="https://www.google.com"
+                        Width="700" 
+                        Height="455"/>
+        </StackPanel>
     </Grid>
 </UserControl>

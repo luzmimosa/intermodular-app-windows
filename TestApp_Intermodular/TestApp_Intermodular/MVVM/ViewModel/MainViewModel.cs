@@ -45,7 +45,7 @@ namespace TestApp_Intermodular.MVVM.ViewModel
             FavVM = new FavoritesViewModel();
             ProfileVM = new ProfileViewModel();
 
-            CurrentView = LogginVM;
+            CurrentView =DiscoveryVM;
 
             HomeViewCommand = new RelayCommand(action => 
             {

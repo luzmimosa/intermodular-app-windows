@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\sergi\Desktop\Intermodular-WPF\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\
 TestApp_Intermodular
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\sergi\Desktop\Intermodular-WPF\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\App.xaml
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\App.xaml
 91098327676
 
 16-69290423
-204-378694113
+204954006825
 MainWindow.xaml;MVVM\View\DiscoveryView.xaml;MVVM\View\FavoritesView.xaml;MVVM\View\HomeView.xaml;MVVM\View\LogInView.xaml;MVVM\View\ProfileView.xaml;Theme\MenuButtonTheme.xaml;Theme\RoundTextboxTheme.xaml;Theme\TextBoxTheme.xaml;
 
 False
