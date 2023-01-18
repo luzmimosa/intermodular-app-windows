@@ -42,7 +42,7 @@
                     </StackPanel>
 
                     <Image
-                           Source="/Images/compassExplore.png" Margin="249,10,0,-22" HorizontalAlignment="Left" Width="271">
+                           Source="/MVVM/View/compassExplore.png" Margin="249,10,0,-22" HorizontalAlignment="Left" Width="271">
                         <UIElement.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>

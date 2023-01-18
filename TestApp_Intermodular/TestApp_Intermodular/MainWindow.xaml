@@ -49,7 +49,16 @@
                              Visibility="Visible"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding LogInViewCommand}"/>
-                
+
+                <RadioButton x:Name="Register" 
+                             Content="Registrarse"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Visibility="Visible"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding RegisterViewCommand}"/>
+
                 <RadioButton Content="Inicio"
                              x:Name="Inicio"
                              Height="50"

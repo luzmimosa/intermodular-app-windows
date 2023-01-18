@@ -6,8 +6,62 @@
              xmlns:local="clr-namespace:TestApp_Intermodular.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="AliceBlue">
-    <Grid>
-            
-    </Grid>
+             Background="Transparent">
+    <StackPanel>
+        <Border 
+            Width="Auto"
+            Height="Auto"
+            Background="#005b12"
+            CornerRadius="10">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/MVVM/View/honk.jpg" 
+                           Width="100" 
+                           Height="100" 
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                            Margin="10,10,10,10"/>
+                    <Label Content="Usuario" 
+                           FontWeight="Bold" 
+                           Foreground="White"
+                           FontSize="42"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="20,0,0,0"/>
+                </StackPanel>
+
+                <Border 
+                    BorderThickness="1" 
+                    BorderBrush="#036D19"
+                    Margin="5,2,5,0"
+                    CornerRadius="10">
+                    <StackPanel>
+                        <Label Content="Opcion A" 
+                           FontWeight="Bold" 
+                           Foreground="White"
+                           FontSize="28"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="20,10,10,10"/>
+                    </StackPanel>
+                </Border>
+
+                <Border 
+                    BorderThickness="1" 
+                    BorderBrush="#036D19"
+                    Margin="5,2,5,0"
+                    CornerRadius="10">
+                    <StackPanel>
+                        <Label Content="Opcion B" 
+                           FontWeight="Bold" 
+                           Foreground="White"
+                           FontSize="28"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="20,10,10,10"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Border>
+    </StackPanel>
 </UserControl>

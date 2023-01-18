@@ -23,16 +23,12 @@ namespace TestApp_Intermodular.MVVM.View
         public LogInView()
         {
             InitializeComponent();
+
         }
         private void Password_MouseDown(object sender, MouseButtonEventArgs e)
         {
             // Your code here
             MessageBox.Show("Acho pijo el Alzheimer.");
-        }
-        private void Register_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            // Your code here
-            MessageBox.Show("Esto debería ser un registro.");
         }
         private void LogginButton_Click(object sender, RoutedEventArgs e)
         {
