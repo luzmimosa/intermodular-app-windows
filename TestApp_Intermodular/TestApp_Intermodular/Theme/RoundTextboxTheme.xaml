@@ -5,7 +5,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border CornerRadius="10" 
+                    <Border CornerRadius="5" 
                             BorderBrush="#2c2c2c"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Background="white">

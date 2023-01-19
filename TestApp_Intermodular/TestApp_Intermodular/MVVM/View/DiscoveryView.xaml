@@ -7,13 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="700">
     <Grid>
-        <StackPanel Background="#005b12">
-            <WebBrowser Name="webBrowser" 
-                    Source="https://www.google.com"
-                        Width="700" 
-                        Height="450"
-                        IsEnabled="True"
-                        Visibility="Visible"/>
-        </StackPanel>
+        <WebBrowser Name="webBrowser" 
+          Source="https://www.google.com"
+          Width="700" 
+          Height="450"
+          IsEnabled="True"
+          Visibility="Visible"/>
     </Grid>
 </UserControl>

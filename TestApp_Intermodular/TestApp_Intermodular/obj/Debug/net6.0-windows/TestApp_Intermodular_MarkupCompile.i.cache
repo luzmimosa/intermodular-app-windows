@@ -16,5 +16,5 @@ C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermo
 204954006825
 MainWindow.xaml;MVVM\View\DiscoveryView.xaml;MVVM\View\FavoritesView.xaml;MVVM\View\HomeView.xaml;MVVM\View\InitialView.xaml;MVVM\View\LogInView.xaml;MVVM\View\ProfileView.xaml;MVVM\View\RegisterView.xaml;Theme\MenuButtonTheme.xaml;Theme\RoundTextboxTheme.xaml;Theme\TextBoxTheme.xaml;
 
-True
+False
 

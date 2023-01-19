@@ -1,0 +1,7 @@
+Principal -> #ffffff
+Secundario -> #f0f2f5
+Terciario -> #54656f
+
+fondo opcional
+#54656f
+#dededb

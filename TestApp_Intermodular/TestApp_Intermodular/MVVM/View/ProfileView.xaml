@@ -7,61 +7,52 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              Background="Transparent">
-    <StackPanel>
-        <Border 
-            Width="Auto"
-            Height="Auto"
-            Background="#005b12"
-            CornerRadius="10">
-            <StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/MVVM/View/honk.jpg" 
-                           Width="100" 
-                           Height="100" 
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"
-                            Margin="10,10,10,10"/>
-                    <Label Content="Usuario" 
-                           FontWeight="Bold" 
-                           Foreground="White"
-                           FontSize="42"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Left"
-                           Margin="20,0,0,0"/>
-                </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-                <Border 
-                    BorderThickness="1" 
-                    BorderBrush="#036D19"
-                    Margin="5,2,5,0"
-                    CornerRadius="10">
-                    <StackPanel>
-                        <Label Content="Opcion A" 
-                           FontWeight="Bold" 
-                           Foreground="White"
-                           FontSize="28"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Left"
-                           Margin="20,10,10,10"/>
-                    </StackPanel>
-                </Border>
+        <StackPanel Grid.Column="0">
+            <TextBlock 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Text="Nombre de usuario" 
+                       FontSize="18" 
+                       Foreground="White" 
+                       TextWrapping="Wrap"/>
 
-                <Border 
-                    BorderThickness="1" 
-                    BorderBrush="#036D19"
-                    Margin="5,2,5,0"
-                    CornerRadius="10">
-                    <StackPanel>
-                        <Label Content="Opcion B" 
-                           FontWeight="Bold" 
-                           Foreground="White"
-                           FontSize="28"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Left"
-                           Margin="20,10,10,10"/>
-                    </StackPanel>
-                </Border>
-            </StackPanel>
-        </Border>
-    </StackPanel>
+            <TextBlock 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Text="Contraseña" 
+                       FontSize="18" 
+                       Foreground="White" 
+                       TextWrapping="Wrap"
+                       Margin="0,10,0,0"/>
+
+            <TextBlock 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Text="Nueva contraseña" 
+                       FontSize="18" 
+                       Foreground="White" 
+                       TextWrapping="Wrap"
+                       Margin="0,10,0,0"/>
+            <TextBlock 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Text="Correo electrónico" 
+                       FontSize="18" 
+                       Foreground="White" 
+                       TextWrapping="Wrap"
+                       Margin="0,10,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <TextBox VerticalAlignment="Center" 
+                     HorizontalAlignment="Left"
+                     MinWidth="200"/>
+        </StackPanel>
+    </Grid>
 </UserControl>

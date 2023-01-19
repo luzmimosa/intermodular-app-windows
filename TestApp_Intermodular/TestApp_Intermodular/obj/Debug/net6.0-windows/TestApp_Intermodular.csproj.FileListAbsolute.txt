@@ -172,6 +172,7 @@ C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermo
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.g.cs
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\FavoritesView.g.cs
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\HomeView.g.cs
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\InitialView.g.cs
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\LogInView.g.cs
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\ProfileView.g.cs
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\RegisterView.g.cs
@@ -184,6 +185,7 @@ C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermo
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.baml
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\FavoritesView.baml
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\HomeView.baml
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\InitialView.baml
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\LogInView.baml
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\ProfileView.baml
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\RegisterView.baml
@@ -198,5 +200,3 @@ C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermo
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.pdb
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.genruntimeconfig.cache
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\ref\TestApp_Intermodular.dll
-C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\InitialView.g.cs
-C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\InitialView.baml
