@@ -13,15 +13,13 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
-        AllowsTransparency="True">
+        AllowsTransparency="True" WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-
-
-    <Border Background="#036D19"
+    <Border Background="#12BA58"
                 CornerRadius="20">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -34,18 +32,22 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Intermodular"
-                       VerticalAlignment="Center"
+            <StackPanel Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        Background="#f0f2f5"/>
+
+            <TextBlock Text="WikiHonk"
+                       VerticalAlignment="Bottom"
                        HorizontalAlignment="Left"
-                       Margin="20,0,0,0"
-                       Foreground="White"
+                       Margin="40,0,0,23"
+                       Foreground="Black"
                        FontSize="22"/>
 
             <StackPanel Grid.Row="1">
-                <RadioButton x:Name="login" 
+                <!--<RadioButton x:Name="login" 
                              Content="Iniciar sesión"
                              Height="50"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="14"
                              Visibility="Visible"
                              Style="{StaticResource MenuButtonTheme}"
@@ -54,96 +56,83 @@
                 <RadioButton x:Name="Register" 
                              Content="Registrarse"
                              Height="50"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="14"
                              Visibility="Visible"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding RegisterViewCommand}"/>
+                             Command="{Binding RegisterViewCommand}"/>-->
 
                 <RadioButton Content="Inicio"
                              x:Name="Inicio"
                              Height="50"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="14"
-                             Visibility="Collapsed"
+                             Visibility="Visible"
+                             IsChecked="True"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding HomeViewCommand}"/>
-                
+
                 <RadioButton Content="Mapa"
                              x:Name="Mapa"
                              Height="50"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="14"
-                             Visibility="Collapsed"
+                             Visibility="Visible"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding DiscoveryViewCommand}"/>
 
                 <RadioButton x:Name="Favoritos" 
                              Content="Favoritos"
                              Height="50"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="14"
-                             Visibility="Collapsed"
+                             Visibility="Visible"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding FavoritesViewCommand}"/>
 
                 <RadioButton x:Name="Perfil" 
                              Content="Perfil"
                              Height="50"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="14"
-                             Visibility="Collapsed"
+                             Visibility="Visible"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding ProfileViewCommand}"/>
 
                 <RadioButton x:Name="Salir" 
                              Content="Cerrar sesión"
                              Height="50"
-                             Foreground="White"
+                             Foreground="Black"
                              FontSize="14"
-                             Visibility="Collapsed"
+                             Visibility="Visible"
+                             Click="logout"
                              Style="{StaticResource MenuButtonTheme}"/>
             </StackPanel>
 
-            <Button Content="Minimizar" 
+            <Button Content="-" 
                     Click="MinimizeButton_Click"
-                    Background="#036D19"
-                    Width="80" 
-                    Height="25"
+                    Background="#10a74f"
+                    Width="18" 
+                    Height="18"                   
                     Grid.Column="1"
                     Foreground="White"
-                    FontSize="14"
+                    FontSize="12"
                     VerticalContentAlignment="Center"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Right"
-                    Margin="0,0,100,0"/>
-            
-            <Button Content="Cerrar" 
-                    Click="CloseButton_Click"
-                    Background="#005b12"
-                    Width="80" 
-                    Height="25"
-                    Grid.Column="1"
-                    Foreground="White"
-                    FontSize="14"
-                    VerticalContentAlignment="Center"
-                    VerticalAlignment="Top"
-                    HorizontalAlignment="Right"
-                    Margin="0,0,20,0"/>
+                    Margin="0,5,40,0"/>
 
-            
-            <Button Content="Simulacro" 
-                    Click="Simulacro_Click"
-                    Background="#da2927"
-                    Width="80" 
-                    Height="25"
-                    Grid.Column="0"
-                    Grid.Row="2"
+            <Button Content="x" 
+                    Click="CloseButton_Click"
+                    Background="#ba5812"
+                    Width="18"
+                    Height="18"
+                    Grid.Column="1"
                     Foreground="White"
                     FontSize="14"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    Margin="0,150,0,0"/>
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Margin="0,5,20,0"/>
 
             <TextBox Width="250"
                      Height="40"

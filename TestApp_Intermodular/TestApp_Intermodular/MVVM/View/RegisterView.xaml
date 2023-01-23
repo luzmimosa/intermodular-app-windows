@@ -10,7 +10,7 @@
         <Border 
             Width="Auto"
             Height="Auto"
-            Background="#005b12"
+            Background="Transparent"
             CornerRadius="10">
             <StackPanel Orientation="Vertical"
                         VerticalAlignment="Center"
@@ -19,7 +19,7 @@
                 <StackPanel>
                     <Label Content="Registro" 
                            FontWeight="Bold" 
-                           Foreground="White"
+                           Foreground="Black"
                            FontSize="24"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
@@ -28,7 +28,7 @@
 
                 <StackPanel>
                     <Label Content="Usuario" 
-                           Foreground="White"
+                           Foreground="Black"
                            FontSize="18"
                            VerticalAlignment="Center"
                            Margin="10,0,0,0"/>
@@ -42,7 +42,7 @@
 
                 <StackPanel>
                     <Label Content="Email" 
-                           Foreground="White"
+                           Foreground="Black"
                            FontSize="18"
                            VerticalAlignment="Center"
                            Margin="10,0,0,0"/>
@@ -56,7 +56,7 @@
 
                 <StackPanel>
                     <Label Content="Contraseña" 
-                           Foreground="White"
+                           Foreground="Black"
                            FontSize="18"
                            VerticalAlignment="Center"
                            Margin="10,0,0,0"/>
@@ -68,7 +68,7 @@
                                  Height="25">
                         <PasswordBox.Template>
                             <ControlTemplate TargetType="{x:Type PasswordBox}">
-                                <Border CornerRadius="10" 
+                                <Border CornerRadius="5" 
                                         BorderBrush="#2c2c2c" 
                                         BorderThickness="1"
                                         Background="White">
@@ -84,10 +84,10 @@
                         Width="100"
                         Height="30"
                         Margin="0,20,0,180"
-                        BorderThickness="2"
-                        BorderBrush="White"
-                        Background="#036D19"
-                        Foreground="White"
+                        BorderThickness="1"
+                        BorderBrush="Black"
+                        Background="#12BA58"
+                        Foreground="Black"
                         FontSize="14"
                         Click="Register_Click">
 

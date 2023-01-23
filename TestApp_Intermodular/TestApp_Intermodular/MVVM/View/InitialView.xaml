@@ -10,7 +10,7 @@
     <StackPanel>
         <Border Width="Auto"
             Height="450"
-            Background="#005b12"
+            Background="Transparent"
             CornerRadius="10">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" 
@@ -28,7 +28,7 @@
                 <StackPanel>
                     <Label Content="Bienvenido a WikiHonk" 
                            FontWeight="Bold" 
-                           Foreground="White"
+                           Foreground="Black"
                            FontSize="32"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"

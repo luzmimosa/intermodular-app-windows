@@ -11,7 +11,7 @@
         <Border 
             Width="Auto"
             Height="Auto"
-            Background="#005b12"
+            Background="Transparent"
             CornerRadius="10">
             <StackPanel Orientation="Vertical"
                         VerticalAlignment="Center"
@@ -31,7 +31,7 @@
                 <StackPanel>
                     <Label Content="Wikiloc - Intermodular" 
                            FontWeight="Bold" 
-                           Foreground="White"
+                           Foreground="Black"
                            FontSize="24"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
@@ -40,7 +40,7 @@
 
                 <StackPanel>
                     <Label Content="Usuario" 
-                           Foreground="White"
+                           Foreground="Black"
                            FontSize="18"
                            VerticalAlignment="Center"
                            Margin="10,0,0,0"/>
@@ -53,7 +53,7 @@
                 </StackPanel>
                 <StackPanel>
                     <Label Content="Contraseña" 
-                           Foreground="White"
+                           Foreground="Black"
                            FontSize="18"
                            VerticalAlignment="Center"
                            Margin="10,0,0,0"/>
@@ -78,7 +78,7 @@
 
                 <StackPanel Orientation="Horizontal" Margin="15,0,0,10">
                     <TextBlock Text="Recuperar contraseña" 
-                       Foreground="White"
+                       Foreground="Black"
                        FontSize="14"
                        VerticalAlignment="Center"
                        TextDecorations="Underline"
@@ -90,10 +90,10 @@
                         Width="100"
                         Height="30"
                         Margin="0,0,0,10"
-                        BorderThickness="2"
-                        BorderBrush="White"
-                        Background="#036D19"
-                        Foreground="White"
+                        BorderThickness="1"
+                        BorderBrush="Black"
+                        Background="#12BA58"
+                        Foreground="Black"
                         FontSize="14"
                         Click="LogginButton_Click">
                         

@@ -168,6 +168,7 @@ C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermo
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\RoundTextboxTheme.baml
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\Theme\TextBoxTheme.baml
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\LoginWindows.g.cs
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.g.cs
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\FavoritesView.g.cs
@@ -181,6 +182,7 @@ C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermo
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular_MarkupCompile.cache
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular_MarkupCompile.lref
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\App.baml
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\LoginWindows.baml
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\DiscoveryView.baml
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\FavoritesView.baml
@@ -200,3 +202,5 @@ C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermo
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.pdb
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\TestApp_Intermodular.genruntimeconfig.cache
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\ref\TestApp_Intermodular.dll
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\RegisterWindow.g.cs
+C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\RegisterWindow.baml

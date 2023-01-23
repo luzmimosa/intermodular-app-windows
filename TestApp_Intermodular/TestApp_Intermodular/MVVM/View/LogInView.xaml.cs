@@ -32,7 +32,7 @@ namespace TestApp_Intermodular.MVVM.View
         }
         private void LogginButton_Click(object sender, RoutedEventArgs e)
         {
-          
+            MainWindow mw = new MainWindow();
         }
     }
 }

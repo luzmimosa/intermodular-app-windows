@@ -51,7 +51,7 @@ namespace TestApp_Intermodular.MVVM.ViewModel
             RegisterVM = new RegisterViewModel();
             InitialVM = new InitialViewModel();
 
-            CurrentView =InitialVM;
+            CurrentView =HomeVM;
 
             HomeViewCommand = new RelayCommand(action => 
             {

@@ -4,7 +4,7 @@
              xmlns:viewModel="clr-namespace:TestApp_Intermodular.MVVM.ViewModel"
              xmlns:view="clr-namespace:TestApp_Intermodular.MVVM.View"
              xmlns:local="clr-namespace:TestApp_Intermodular"
-             StartupUri="MainWindow.xaml">
+             StartupUri="LoginWindows.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
