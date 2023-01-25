@@ -26,7 +26,10 @@ namespace TestApp_Intermodular
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindows lg= new LoginWindows();
+        }
+        private void BackToLogin(object sender, RoutedEventArgs e)
+        {
+            LoginWindows lg = new LoginWindows();
             this.Close();
             lg.Show();
         }

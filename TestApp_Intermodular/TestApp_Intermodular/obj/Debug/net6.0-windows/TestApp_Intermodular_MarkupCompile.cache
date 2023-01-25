@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Senka\Desktop\Git_Intermodular_WPF\TestApp_Intermodular\TestApp_Intermodular\App.xaml
-13-1586441566
+14-1175402319
 
-22-99277376
+23119036804
 204954006825
-LoginWindows.xaml;MainWindow.xaml;MVVM\View\DiscoveryView.xaml;MVVM\View\FavoritesView.xaml;MVVM\View\HomeView.xaml;MVVM\View\InitialView.xaml;MVVM\View\LogInView.xaml;MVVM\View\ProfileView.xaml;MVVM\View\RegisterView.xaml;RegisterWindow.xaml;Theme\MenuButtonTheme.xaml;Theme\RoundTextboxTheme.xaml;Theme\TextBoxTheme.xaml;
+LoginWindows.xaml;MainWindow.xaml;MVVM\View\DiscoveryView.xaml;MVVM\View\FavoritesView.xaml;MVVM\View\HomeView.xaml;MVVM\View\InitialView.xaml;MVVM\View\LogInView.xaml;MVVM\View\ProfileView.xaml;MVVM\View\RegisterView.xaml;RecoverWindow.xaml;RegisterWindow.xaml;Theme\MenuButtonTheme.xaml;Theme\RoundTextboxTheme.xaml;Theme\TextBoxTheme.xaml;
 
 False
 

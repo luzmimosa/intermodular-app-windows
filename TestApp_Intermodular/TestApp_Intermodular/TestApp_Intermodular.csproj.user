@@ -31,6 +31,9 @@
     <Compile Update="MVVM\View\RegisterView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="RecoverWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="RegisterWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -61,6 +64,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\RegisterView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RecoverWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RegisterWindow.xaml">

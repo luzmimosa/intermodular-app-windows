@@ -1,0 +1,83 @@
+﻿<Window x:Class="TestApp_Intermodular.RecoverWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestApp_Intermodular"
+        mc:Ignorable="d"
+        Title="RecoverWindow" Height="200" Width="280" Background="Transparent" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <Border 
+            Width="280"
+            Height="200"
+            Background="#12BA58"
+            CornerRadius="10">
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+                <StackPanel>
+                    <Label Content="Recuperar contraseña" 
+                           FontWeight="Bold" 
+                           Foreground="Black"
+                           FontSize="24"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <Label Content="Introduce tu correo" 
+                           Foreground="Black"
+                           FontSize="16"
+                           VerticalAlignment="Center"
+                           Margin="5,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBox x:Name="tb_correo" 
+                             Width="250" 
+                             Height="25"
+                             Text="user@example.com"
+                             Foreground="DarkGray"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <Button Content="Enviar"
+                        Width="100"
+                        Height="30"
+                        Margin="0,20,0,0"
+                        BorderThickness="1"
+                        BorderBrush="Black"
+                        Background="#ba5812"
+                        Foreground="Black"
+                        FontSize="14"
+                        Click="Recover_Click">
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border CornerRadius="5"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      RecognizesAccessKey="True"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="Volver" 
+                       Foreground="Black"
+                       FontSize="14"
+                       HorizontalAlignment="Center"
+                       TextDecorations="Underline"
+                       MouseLeftButtonDown="RecoveryBack"
+                       Margin="0,10,0,0"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </StackPanel>
+</Window>

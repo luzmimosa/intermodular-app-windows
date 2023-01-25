@@ -40,7 +40,9 @@ namespace TestApp_Intermodular
 
         private void PasswordRecovery(object sender, MouseButtonEventArgs e)
         {
-
+            RecoverWindow rw = new RecoverWindow();
+            this.Close();
+            rw.Show();
         }
     }
 }
