@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -33,6 +34,18 @@ namespace TestApp_Intermodular
             LoginWindows lg = new LoginWindows();
             this.Close();
             lg.Show();
+        }
+        private void EmailTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string emailPattern = @"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*" + "@" + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$";
+            if (Regex.IsMatch(RecoverEmailTextBox.Text, emailPattern))
+            {
+                errorTextBlock.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                errorTextBlock.Visibility = Visibility.Visible;
+            }
         }
     }
 }

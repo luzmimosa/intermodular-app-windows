@@ -22,13 +22,7 @@
     <Compile Update="MVVM\View\InitialView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\LogInView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="MVVM\View\ProfileView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="MVVM\View\RegisterView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="RecoverWindow.xaml.cs">
@@ -57,13 +51,7 @@
     <Page Update="MVVM\View\InitialView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\LogInView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MVVM\View\ProfileView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MVVM\View\RegisterView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RecoverWindow.xaml">

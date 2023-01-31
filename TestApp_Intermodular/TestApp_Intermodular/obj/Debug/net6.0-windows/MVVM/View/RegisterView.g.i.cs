@@ -78,7 +78,7 @@ namespace TestApp_Intermodular.MVVM.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TestApp_Intermodular;component/mvvm/view/registerview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TestApp_Intermodular;V1.0.0.0;component/mvvm/view/registerview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\MVVM\View\RegisterView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

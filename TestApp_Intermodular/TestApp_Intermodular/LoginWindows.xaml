@@ -45,9 +45,15 @@
                 </StackPanel>
 
                 <StackPanel>
-                    <TextBox x:Name="tb_email" 
+                    <TextBox x:Name="LoginEmailTextBox" 
                              Width="250" 
-                             Height="25"/>
+                             Height="25"                            
+                             TextChanged="EmailTextBox_TextChanged"/>
+
+                    <TextBlock x:Name="LoginErrorTextBlock" 
+                               Visibility="Collapsed"
+                               Text="Introduce un email válido 'user@example.com'"
+                               Foreground="Red"/>
                 </StackPanel>
                 <StackPanel>
                     <Label Content="Contraseña" 
@@ -56,22 +62,23 @@
                            VerticalAlignment="Center"/>
                 </StackPanel>
 
-                <StackPanel>
+                <StackPanel Orientation="Horizontal">
                     <PasswordBox x:Name="tb_password" 
-                                 Width="250" 
-                                 Height="25">
+                 Width="250" 
+                 Height="25">
                         <PasswordBox.Template>
                             <ControlTemplate TargetType="{x:Type PasswordBox}">
                                 <Border CornerRadius="5" 
-                                        BorderBrush="#2c2c2c" 
-                                        BorderThickness="1"
-                                        Background="White">
+                        BorderBrush="#2c2c2c" 
+                        BorderThickness="1"
+                        Background="White">
                                     <ScrollViewer x:Name="PART_ContentHost" />
                                 </Border>
                             </ControlTemplate>
                         </PasswordBox.Template>
                     </PasswordBox>
                 </StackPanel>
+
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Recuperar contraseña" 

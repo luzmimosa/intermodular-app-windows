@@ -21,20 +21,12 @@
                 <view:InitialView/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModel:LogInViewModel}">
-                <view:LogInView/>
-            </DataTemplate>
-
             <DataTemplate DataType="{x:Type viewModel:DiscoveryViewModel}">
                 <view:DiscoveryView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type viewModel:ProfileViewModel}">
                 <view:ProfileView/>
-            </DataTemplate>
-
-            <DataTemplate DataType="{x:Type viewModel:RegisterViewModel}">
-                <view:RegisterView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type viewModel:FavoritesViewModel}">

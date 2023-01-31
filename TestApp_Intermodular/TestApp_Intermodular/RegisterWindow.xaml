@@ -45,7 +45,7 @@
                 </StackPanel>
 
                 <StackPanel>
-                    <Label Content="Nombre" 
+                    <Label Content="Nombre público" 
                            Foreground="Black"
                            FontSize="16"
                            VerticalAlignment="Center"
@@ -53,25 +53,10 @@
                 </StackPanel>
 
                 <StackPanel>
-                    <TextBox x:Name="tb_name" 
+                    <TextBox x:Name="tb_displayName" 
                              Width="250" 
                              Height="25"/>
                 </StackPanel>
-
-                <StackPanel>
-                    <Label Content="Apellido" 
-                           Foreground="Black"
-                           FontSize="16"
-                           VerticalAlignment="Center"
-                           Margin="0,0,0,0"/>
-                </StackPanel>
-
-                <StackPanel>
-                    <TextBox x:Name="tb_surname" 
-                             Width="250" 
-                             Height="25"/>
-                </StackPanel>
-
                 <StackPanel>
                     <Label Content="Email" 
                            Foreground="Black"
@@ -81,12 +66,13 @@
                 </StackPanel>
 
                 <StackPanel>
-                    <TextBox x:Name="tb_email" 
+                    <TextBox x:Name="RegisterEmailTextBox" 
                              Width="250" 
                              Height="25"
-                             IsHitTestVisible="False"
-                             Text="user@example.com"
-                             Foreground="DarkGray"/>
+                             TextChanged="EmailTextBox_TextChanged"/>
+                    <TextBlock x:Name="errorTextBlock" 
+                               Visibility="Collapsed" 
+                               Foreground="Red">Introduce un email válido</TextBlock>
                 </StackPanel>
 
                 <StackPanel>
