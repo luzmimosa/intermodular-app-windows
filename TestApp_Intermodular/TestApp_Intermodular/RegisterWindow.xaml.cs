@@ -35,7 +35,11 @@ namespace TestApp_Intermodular
         private async void Register_Click(object sender, RoutedEventArgs e)
         {
             string url = "https://intermodular.fadedbytes.com/account/register";
-            var client = new HttpClient();
+
+
+            var handler = new HttpClientHandler();
+            handler.ServerCertificateCustomValidationCallback = delegate { return true; };
+            var client = new HttpClient(handler);
 
             Post post = new Post()
             {
@@ -49,11 +53,15 @@ namespace TestApp_Intermodular
             var data = JsonSerializer.Serialize<Post>(post);
             HttpContent content =
                 new StringContent(data, System.Text.Encoding.UTF8,"application/json");
-            var httpResponse = await client.PostAsync(url, content); 
+
+            MessageBox.Show("Sending request");
+            var httpResponse = await client.PostAsync(url, content);
+            MessageBox.Show("Code: " + httpResponse.StatusCode);
             
             if(httpResponse.IsSuccessStatusCode)
             {
                 var result = await httpResponse.Content.ReadAsStringAsync();
+                MessageBox.Show(result);
             }
 
         }
