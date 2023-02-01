@@ -54,19 +54,28 @@ namespace TestApp_Intermodular
                 string responseString = await httpResponse.Content.ReadAsStringAsync();
 
                 HttpRequestMessage request = new HttpRequestMessage();
-                var headers = request.Headers;
                 MessageBox.Show(responseString);
 
-                MessageBox.Show("Contains: "+headers.Contains("Authorization"));
-
-                /*if (headers.TryGetValues("Authorization", out var values))
+                if (httpResponse.IsSuccessStatusCode)
                 {
-                    var token = values.FirstOrDefault();
-                    MessageBox.Show(token);
+                    var headers = httpResponse.Headers;
+                    string token = null;
+
+
+                    foreach (var foundToken in headers.GetValues("Authorization"))
+                    {
+                        token = foundToken;
+                    }
+
+                    if (token == null)
+                    {
+                        //error, no ha devuelto nada
+                        MessageBox.Show("No hay token :(");
+                    } else
+                    {
+                        MessageBox.Show("Token: " + token);
+                    }
                 }
-                else {
-                    MessageBox.Show("Not found");
-                }*/
 
                 MainWindow mw = new MainWindow();
                 this.Close();
