@@ -45,15 +45,9 @@
                 </StackPanel>
 
                 <StackPanel>
-                    <TextBox x:Name="LoginEmailTextBox" 
+                    <TextBox x:Name="LoginUserTextBox" 
                              Width="250" 
-                             Height="25"                            
-                             TextChanged="EmailTextBox_TextChanged"/>
-
-                    <TextBlock x:Name="LoginErrorTextBlock" 
-                               Visibility="Collapsed"
-                               Text="Introduce un email válido 'user@example.com'"
-                               Foreground="Red"/>
+                             Height="25"/>
                 </StackPanel>
                 <StackPanel>
                     <Label Content="Contraseña" 

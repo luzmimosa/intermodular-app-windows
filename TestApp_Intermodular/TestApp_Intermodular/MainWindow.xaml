@@ -42,6 +42,15 @@
                        Margin="40,0,0,23"
                        Foreground="Black"
                        FontSize="22"/>
+            
+            <TextBlock x:Name="welcome"
+                       VerticalAlignment="Bottom"
+                       HorizontalAlignment="Right"
+                       Margin="0,0,40,5"
+                       Foreground="White"
+                       FontSize="18"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
 
             <StackPanel Grid.Row="1">
                 <!--<RadioButton x:Name="login" 

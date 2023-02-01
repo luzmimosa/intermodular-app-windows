@@ -28,8 +28,6 @@ namespace TestApp_Intermodular
         public RegisterWindow()
         {
             InitializeComponent();
-            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-
         }
 
         private async void Register_Click(object sender, RoutedEventArgs e)
@@ -54,14 +52,11 @@ namespace TestApp_Intermodular
             HttpContent content =
                 new StringContent(data, System.Text.Encoding.UTF8,"application/json");
 
-            MessageBox.Show("Sending request");
             var httpResponse = await client.PostAsync(url, content);
-            MessageBox.Show("Code: " + httpResponse.StatusCode);
             
             if(httpResponse.IsSuccessStatusCode)
             {
                 var result = await httpResponse.Content.ReadAsStringAsync();
-                MessageBox.Show(result);
             }
 
         }

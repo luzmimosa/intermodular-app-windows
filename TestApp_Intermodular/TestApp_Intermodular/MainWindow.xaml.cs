@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestApp_Intermodular.Classes;
 
 namespace TestApp_Intermodular
 {
@@ -20,11 +23,36 @@ namespace TestApp_Intermodular
     /// </summary>
     public partial class MainWindow : Window
     {
+        String username;
 
         
-        public MainWindow()
+         public MainWindow()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            UserLoad();
+            welcome.Text = "Bienvenido, "+username+".";
+            
+        }
+
+        private async void UserLoad() {
+            Post user = new Post();
+            string name = user.username;
+            string url = "https://intermodular.fadedbytes.com/api/v1/user/"+ name;
+
+
+            var handler = new HttpClientHandler();
+            handler.ServerCertificateCustomValidationCallback = delegate { return true; };
+            var client = new HttpClient(handler);
+
+            var httpResponse = await client.GetAsync(url);
+            if(httpResponse.IsSuccessStatusCode)
+            {
+                var content = await httpResponse.Content.ReadAsStringAsync();
+                List<Classes.Post> posts =
+                    JsonSerializer.Deserialize<List<Classes.Post>>(content);
+                username = user.username;
+            }
+
         }
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {
