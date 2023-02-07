@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -31,6 +32,26 @@ namespace TestApp_Intermodular
             }
         }
     }
+
+    public class FileCreator
+    {
+        public void CreateTextFile(string fileName, string content)
+        {
+            string path = System.IO.Path.Combine(Directory.GetCurrentDirectory(), fileName + ".txt");
+            File.WriteAllText(path, content);
+        }
+    }
+    public class FileReader
+    {
+        public static string fileContent;
+
+        public static void ReadTextFile(string fileName)
+        {
+            string path = System.IO.Path.Combine(Directory.GetCurrentDirectory(), fileName + ".txt");
+            fileContent = File.ReadAllText(path);
+        }
+    }       //Para leer el token usar --> FileReader.ReadTextFile("TOKEN");
+                                    //y luego asignar a variable --> string contents = FileReader.fileContent;
     public partial class LoginWindows : Window
     {
         public LoginWindows()
@@ -81,6 +102,9 @@ namespace TestApp_Intermodular
                     } else
                     {
                        GlobalToken.Token= token;
+                        FileCreator fileCreator = new FileCreator();
+                        fileCreator.CreateTextFile("TOKEN", token);
+
                     }
                 }
 

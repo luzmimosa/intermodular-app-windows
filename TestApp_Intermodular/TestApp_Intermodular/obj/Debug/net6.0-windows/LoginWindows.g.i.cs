@@ -70,7 +70,7 @@ namespace TestApp_Intermodular {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TestApp_Intermodular;V1.0.0.0;component/loginwindows.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TestApp_Intermodular;component/loginwindows.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\LoginWindows.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

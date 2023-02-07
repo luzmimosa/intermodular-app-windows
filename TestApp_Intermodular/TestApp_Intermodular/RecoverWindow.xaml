@@ -37,8 +37,6 @@
                     <TextBox x:Name="RecoverEmailTextBox" 
                              Width="250" 
                              Height="25"
-                             Text="user@example.com"
-                             Foreground="Gray"
                              TextChanged="EmailTextBox_TextChanged"/>
                     <TextBlock x:Name="errorTextBlock" 
                                Visibility="Collapsed" 

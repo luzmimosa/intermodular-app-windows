@@ -27,7 +27,7 @@ namespace TestApp_Intermodular.MVVM.View
         public HomeView()
         {
             InitializeComponent();
-            GetDataFromServer();
+            //GetDataFromServer();
         }
         private async void GetDataFromServer()
         {
