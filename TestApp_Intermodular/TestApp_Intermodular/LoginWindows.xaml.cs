@@ -18,9 +18,19 @@ using TestApp_Intermodular.Classes;
 
 namespace TestApp_Intermodular
 {
-    /// <summary>
-    /// Lógica de interacción para LoginWindows.xaml
-    /// </summary>
+    //Metodo para alojar el token y comprobar y actualizar que el token es el válido.
+    public static class GlobalToken
+    {
+        public static string Token;
+
+        public static void CheckToken(String CurrentToken) 
+        {
+            if (!CurrentToken.Equals(Token)) 
+            { 
+                Token = CurrentToken;
+            }
+        }
+    }
     public partial class LoginWindows : Window
     {
         public LoginWindows()
@@ -52,9 +62,7 @@ namespace TestApp_Intermodular
             if (httpResponse.IsSuccessStatusCode)
             {
                 string responseString = await httpResponse.Content.ReadAsStringAsync();
-
                 HttpRequestMessage request = new HttpRequestMessage();
-                MessageBox.Show(responseString);
 
                 if (httpResponse.IsSuccessStatusCode)
                 {
@@ -69,11 +77,10 @@ namespace TestApp_Intermodular
 
                     if (token == null)
                     {
-                        //error, no ha devuelto nada
-                        MessageBox.Show("No hay token :(");
+                        MessageBox.Show("Token not found.");
                     } else
                     {
-                        MessageBox.Show("Token: " + token);
+                       GlobalToken.Token= token;
                     }
                 }
 

@@ -70,7 +70,7 @@ namespace TestApp_Intermodular {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TestApp_Intermodular;component/recoverwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TestApp_Intermodular;V1.0.0.0;component/recoverwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\RecoverWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

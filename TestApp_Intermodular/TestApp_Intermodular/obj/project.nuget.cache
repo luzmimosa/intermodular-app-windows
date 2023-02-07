@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lM/dTkTKMnBAE/kH/oxT8xSoIVKhmOECvXb8mS6/5Fe6LzZ6V6PdUcCIfIZIVXjz0MNaZ61j8TqRmoeKQMH8JA==",
+  "dgSpecHash": "0zPmuvUV8igi9sJY6nfXKspyk36ZoUBOjr1+hfOoEgz6DwwQPuqHOBCiS6QH95seeu/Z0g+m/OU9yL1jnF3o3A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Senka\\Desktop\\Intermodular\\intermodular-app-windows\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
+  "projectFilePath": "C:\\Users\\sergi\\Source\\Repos\\luzmimosa\\intermodular-app-windows\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Senka\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512"
+    "C:\\Users\\sergi\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512"
   ],
   "logs": []
 }
