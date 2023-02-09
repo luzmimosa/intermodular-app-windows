@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TestApp_Intermodular",
+    "\\TestApp_Intermodular\\TestApp_Intermodular"
   ],
-  "SelectedNode": "\\TestApp_Intermodular.sln",
+  "SelectedNode": "\\TestApp_Intermodular\\TestApp_Intermodular\\RecoverWindow.xaml",
   "PreviewInSolutionExplorer": false
 }
