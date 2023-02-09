@@ -23,11 +23,13 @@ namespace TestApp_Intermodular.MVVM.View
     /// </summary>
     public partial class HomeView : UserControl
     {
+        public List<MiniRoute> MiniRoutes { get; set; } = new List<MiniRoute>();
         public Data Data { get; set; }
         public HomeView()
         {
             InitializeComponent();
             //GetDataFromServer();
+            DisplayRoutes(4);
         }
         private async void GetDataFromServer()
         {
@@ -53,5 +55,21 @@ namespace TestApp_Intermodular.MVVM.View
                 }
             }
         }
+
+        private void DisplayRoutes(int number)
+        {
+            for (int i = 0; i < number; i++)
+            {
+                MiniRoute route = new MiniRoute
+                {
+                    Title = Data.Title,
+                    Subtitle = Data.Subtitle,
+                    Number = Data.Number
+                };
+
+                // Add the created MiniRoute instance to a list or another data structure for later use
+            }
+        }
+
     }
 }

@@ -10,11 +10,11 @@ using System.Windows.Media.Imaging;
 
 namespace TestApp_Intermodular.Classes
 {
-    class MiniRoute
+    public class MiniRoute
     {
-        public string Title { get; private set; }
-        public string Subtitle { get; private set; }
-        public int Number { get; private set; }
+        public string? Title { get; set; }
+        public string? Subtitle { get; set; }
+        public string? Number { get; set; }
 
         public static void ShowRoutes() 
         {
@@ -29,7 +29,7 @@ namespace TestApp_Intermodular.Classes
             {
                 Title = "My Title",
                 Subtitle = "My Subtitle",
-                Number = 42
+                Number = "My KM"
             };
 
             var grid = new Grid

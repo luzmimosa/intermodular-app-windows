@@ -7,18 +7,38 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <Grid Height="300" Width="300" DataContext="{Binding Data}" Background="Transparent" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Bottom">
-            <TextBlock Text="Alo{Binding Title}" FontWeight="Bold" Foreground="White" FontSize="24" TextTrimming="CharacterEllipsis" Width="250"/>
-            <TextBlock Text="subAlo{Binding Subtitle}novetuquegeniataesoziquillo" Foreground="White" FontSize="16" TextTrimming="CharacterEllipsis" Width="200"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-            <TextBlock Text="Numalo{Binding Number}" Foreground="White" FontSize="16"/>
-        </StackPanel>
-    </Grid>
+    <UserControl.Resources>
+        <Style x:Key="MiniRouteStyle" TargetType="{x:Type Border}">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+    </UserControl.Resources>
 
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding MiniRoutes}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel IsItemsHost="True"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource MiniRouteStyle}">
+                            <!-- Add your content here, for example: -->
+                            <StackPanel>
+                                <TextBlock Text="{Binding Title}"/>
+                                <TextBlock Text="{Binding Subtitle}"/>
+                                <TextBlock Text="{Binding Number}"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
 </UserControl>
