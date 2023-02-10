@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -16,6 +18,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TestApp_Intermodular.Classes;
+using Newtonsoft.Json;
 
 namespace TestApp_Intermodular
 {
@@ -54,12 +57,18 @@ namespace TestApp_Intermodular
                                     //y luego asignar a variable --> string contents = FileReader.fileContent;
     public partial class LoginWindows : Window
     {
+        public static string userName { get; set; }
+        public static string userPassword { get; set; }
         public LoginWindows()
         {
             InitializeComponent();
             
         }
-
+        private double ConvertToKm(int meters)
+        {
+            double kilometers = meters / 1000.0;
+            return Math.Round(kilometers, 1);
+        }
         private async void test() 
         {
             using (var client = new HttpClient())
@@ -69,11 +78,21 @@ namespace TestApp_Intermodular
                 var response = await client.GetAsync(url);
                 var responseContent = await response.Content.ReadAsStringAsync();
                 MessageBox.Show(responseContent);
+
+                var json = JsonConvert.DeserializeObject<dynamic>(responseContent);
+                MiniRoute.Name = json.name;
+                MiniRoute.Description = json.description;
+                int km = json.length;
+                double length = ConvertToKm(km);
+                MiniRoute.Length=length;
+                MessageBox.Show(MiniRoute.Name+"\n"+MiniRoute.Description+"\n"+MiniRoute.Length);
+                
             }
         }
 
         private async void LogginButton_Click(object sender, RoutedEventArgs e)
         {
+            
             string url = "https://intermodular.fadedbytes.com/account/login";
 
 
@@ -87,7 +106,7 @@ namespace TestApp_Intermodular
                 password = tb_password.Password
             };
 
-            var data = JsonSerializer.Serialize<LoginPost>(post);
+            var data = System.Text.Json.JsonSerializer.Serialize<LoginPost>(post);
             HttpContent content =
                 new StringContent(data, System.Text.Encoding.UTF8, "application/json");
 
@@ -117,7 +136,8 @@ namespace TestApp_Intermodular
                        GlobalToken.Token= token;
                         FileCreator fileCreator = new FileCreator();
                         fileCreator.CreateTextFile("TOKEN", token);
-
+                        userName = LoginUserTextBox.Text;
+                        userPassword= tb_password.Password;
                         test();
 
                     }

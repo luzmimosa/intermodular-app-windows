@@ -23,39 +23,11 @@ namespace TestApp_Intermodular.MVVM.View
     /// </summary>
     public partial class HomeView : UserControl
     {
-        public List<MiniRoute> MiniRoutes { get; set; } = new List<MiniRoute>();
-        public Data Data { get; set; }
         public HomeView()
         {
             InitializeComponent();
-            //GetDataFromServer();
             DisplayRoutes(13);
         }
-        private async void GetDataFromServer()
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                HttpResponseMessage response = await client.GetAsync("https://yourserver.com/api/data");
-
-                if (response.IsSuccessStatusCode)
-                {
-                    // Read the response content
-                    string content = await response.Content.ReadAsStringAsync();
-
-                    // Deserialize the content into an object
-                    // For example, if the content is in JSON format, you could use Newtonsoft.Json or System.Text.Json to deserialize the content into an object
-
-                    Data = new Data
-                    {
-                        ImageSource = new BitmapImage(new Uri("image.png", UriKind.Relative)),
-                        Title = "Title",
-                        Subtitle = "Subtitle",
-                        Number = "123"
-                    };
-                }
-            }
-        }
-
         private void DisplayRoutes(int number)
         {
             int cont = 0;

@@ -13,28 +13,28 @@ namespace TestApp_Intermodular.Classes
 {
     public class MiniRoute
     {
-        public string? Title { get; set; }
-        public string? Subtitle { get; set; }
-        public string? Number { get; set; }
-        public bool? Fav { get; set; }
-        public bool? UID { get; set; }
+        public static string Name { get; set; }
+        public static string Description { get; set; }
+        public static double Length { get; set; }
+        public static bool Fav { get; set; }
+        public static bool UID { get; set; }
 
         public static Grid ShowRoutes() 
         {
 
-            var dataContext = new MiniRoute
-            {
-                Title = "Titulo de la ruta",
-                Subtitle = "Descripción breve de la ruta",
-                Number = "kilómetros",
-                Fav = false
-            };
+            //var dataContext = new MiniRoute
+            //{
+            //    Title = " ",
+            //    Subtitle = "Descripción breve de la ruta",
+            //    Number = "kilómetros",
+            //    Fav = false
+            //};
 
             var grid = new Grid
             {
                 Height = 150,
                 Width = 300,
-                DataContext = dataContext,
+                //DataContext = dataContext,
                 Background = Brushes.DarkGray,
                 Margin = new Thickness(5)
             };
@@ -51,7 +51,7 @@ namespace TestApp_Intermodular.Classes
                 VerticalAlignment = VerticalAlignment.Bottom,
                 Children = {
                     new TextBlock {
-                        Text =((dynamic)dataContext).Title,
+                        Text =(dynamic)Name,
                         FontWeight = FontWeights.Bold,
                         Foreground = Brushes.White,
                         FontSize = 24,
@@ -60,7 +60,7 @@ namespace TestApp_Intermodular.Classes
                         Margin = new Thickness(5,0,0,0)
                     },
                     new TextBlock {
-                        Text =((dynamic)dataContext).Subtitle,
+                        Text =(dynamic)Description,
                         Foreground = Brushes.White,
                         FontSize = 16,
                         TextTrimming = TextTrimming.CharacterEllipsis,
@@ -79,7 +79,7 @@ namespace TestApp_Intermodular.Classes
                 HorizontalAlignment = HorizontalAlignment.Right,
                 Children = {
                     new TextBlock {
-                        Text =((dynamic)dataContext).Number,
+                        Text =(dynamic)Length.ToString()+"km",
                         Foreground = Brushes.White,
                         FontSize = 16,
                         Margin = new Thickness(0,0,5,0)
