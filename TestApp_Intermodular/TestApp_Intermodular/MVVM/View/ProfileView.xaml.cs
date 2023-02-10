@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+
 
 namespace TestApp_Intermodular.MVVM.View
 {
@@ -23,6 +25,17 @@ namespace TestApp_Intermodular.MVVM.View
         public ProfileView()
         {
             InitializeComponent();
+        }
+        private void ImageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.jpeg, *.png)|*.bmp;*.jpg;*.jpeg;*.png";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string filePath = openFileDialog.FileName;
+                ImageSource imageSource = new BitmapImage(new Uri(filePath));
+                Image.Source = imageSource;
+            }
         }
     }
 }
