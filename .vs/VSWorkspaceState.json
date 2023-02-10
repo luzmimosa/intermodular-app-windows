@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\TestApp_Intermodular",
-    "\\TestApp_Intermodular\\TestApp_Intermodular"
+    "\\TestApp_Intermodular\\TestApp_Intermodular",
+    "\\TestApp_Intermodular\\TestApp_Intermodular\\MVVM",
+    "\\TestApp_Intermodular\\TestApp_Intermodular\\MVVM\\View"
   ],
-  "SelectedNode": "\\TestApp_Intermodular\\TestApp_Intermodular\\RecoverWindow.xaml",
+  "SelectedNode": "\\TestApp_Intermodular\\TestApp_Intermodular\\App.xaml",
   "PreviewInSolutionExplorer": false
 }

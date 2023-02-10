@@ -29,7 +29,7 @@ namespace TestApp_Intermodular.MVVM.View
         {
             InitializeComponent();
             //GetDataFromServer();
-            DisplayRoutes(4);
+            DisplayRoutes(13);
         }
         private async void GetDataFromServer()
         {
@@ -58,18 +58,22 @@ namespace TestApp_Intermodular.MVVM.View
 
         private void DisplayRoutes(int number)
         {
+            int cont = 0;
             for (int i = 0; i < number; i++)
             {
-                MiniRoute route = new MiniRoute
-                {
-                    Title = Data.Title,
-                    Subtitle = Data.Subtitle,
-                    Number = Data.Number
-                };
+                Grid grid = MiniRoute.ShowRoutes();
 
-                // Add the created MiniRoute instance to a list or another data structure for later use
+                if (cont % 2 == 0)
+                {
+                    ColumnA.Children.Add(grid);
+                    cont++;
+                }
+                else
+                {
+                    ColumnB.Children.Add(grid);
+                    cont++;
+                }
             }
         }
-
     }
 }

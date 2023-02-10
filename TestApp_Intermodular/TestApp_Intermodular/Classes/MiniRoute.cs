@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using TestApp_Intermodular.MVVM.View;
 
 namespace TestApp_Intermodular.Classes
 {
@@ -15,29 +16,26 @@ namespace TestApp_Intermodular.Classes
         public string? Title { get; set; }
         public string? Subtitle { get; set; }
         public string? Number { get; set; }
+        public bool? Fav { get; set; }
 
-        public static void ShowRoutes() 
+        public static Grid ShowRoutes() 
         {
-            //Grid agrid = new Grid
-            //{
-            //    Height = 300,
-            //    Width = 300
-            //};
-            //agrid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Auto) });
 
             var dataContext = new MiniRoute
             {
-                Title = "My Title",
-                Subtitle = "My Subtitle",
-                Number = "My KM"
+                Title = "Titulo de la ruta",
+                Subtitle = "Descripción breve de la ruta",
+                Number = "kilómetros",
+                Fav = false
             };
 
             var grid = new Grid
             {
-                Height = 300,
+                Height = 150,
                 Width = 300,
                 DataContext = dataContext,
-                Background = Brushes.DarkGray
+                Background = Brushes.DarkGray,
+                Margin = new Thickness(5)
             };
 
             var column1 = new ColumnDefinition { Width = new GridLength(2, GridUnitType.Star) };
@@ -57,14 +55,16 @@ namespace TestApp_Intermodular.Classes
                         Foreground = Brushes.White,
                         FontSize = 24,
                         TextTrimming = TextTrimming.CharacterEllipsis,
-                        Width = 250
+                        Width = 250,
+                        Margin = new Thickness(5,0,0,0)
                     },
                     new TextBlock {
                         Text =((dynamic)dataContext).Subtitle,
                         Foreground = Brushes.White,
                         FontSize = 16,
                         TextTrimming = TextTrimming.CharacterEllipsis,
-                        Width = 200
+                        Width = 200,
+                        Margin = new Thickness(5,0,0,0)
                     }
                 }
             };
@@ -80,13 +80,14 @@ namespace TestApp_Intermodular.Classes
                     new TextBlock {
                         Text =((dynamic)dataContext).Number,
                         Foreground = Brushes.White,
-                        FontSize = 16
+                        FontSize = 16,
+                        Margin = new Thickness(0,0,5,0)
                     }
                 }
             };
             Grid.SetColumn(stackPanel2, 1);
             grid.Children.Add(stackPanel2);
-
+            return grid;
         }
     }   
 }
