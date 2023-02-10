@@ -57,6 +57,19 @@ namespace TestApp_Intermodular
         public LoginWindows()
         {
             InitializeComponent();
+            
+        }
+
+        private async void test() 
+        {
+            using (var client = new HttpClient())
+            {
+                string url = "https://intermodular.fadedbytes.com/api/v1/route/fdbc284c99cbfb59b5e66531689f362b76cf8db325271b7cd183e0a9c2c0c135";
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer "+GlobalToken.Token);
+                var response = await client.GetAsync(url);
+                var responseContent = await response.Content.ReadAsStringAsync();
+                MessageBox.Show(responseContent);
+            }
         }
 
         private async void LogginButton_Click(object sender, RoutedEventArgs e)
@@ -104,6 +117,8 @@ namespace TestApp_Intermodular
                        GlobalToken.Token= token;
                         FileCreator fileCreator = new FileCreator();
                         fileCreator.CreateTextFile("TOKEN", token);
+
+                        test();
 
                     }
                 }

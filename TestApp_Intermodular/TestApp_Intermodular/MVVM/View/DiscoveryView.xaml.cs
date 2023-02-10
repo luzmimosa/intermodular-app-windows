@@ -23,7 +23,6 @@ namespace TestApp_Intermodular.MVVM.View
         public DiscoveryView()
         {
             InitializeComponent();
-            webBrowser.Navigate(new Uri("http://www.youtube.com/"));
         }
     }
 }

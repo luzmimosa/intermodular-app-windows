@@ -17,6 +17,7 @@ namespace TestApp_Intermodular.Classes
         public string? Subtitle { get; set; }
         public string? Number { get; set; }
         public bool? Fav { get; set; }
+        public bool? UID { get; set; }
 
         public static Grid ShowRoutes() 
         {
@@ -55,7 +56,7 @@ namespace TestApp_Intermodular.Classes
                         Foreground = Brushes.White,
                         FontSize = 24,
                         TextTrimming = TextTrimming.CharacterEllipsis,
-                        Width = 250,
+                        MaxWidth = 250,
                         Margin = new Thickness(5,0,0,0)
                     },
                     new TextBlock {
@@ -63,7 +64,7 @@ namespace TestApp_Intermodular.Classes
                         Foreground = Brushes.White,
                         FontSize = 16,
                         TextTrimming = TextTrimming.CharacterEllipsis,
-                        Width = 200,
+                        MaxWidth = 200,
                         Margin = new Thickness(5,0,0,0)
                     }
                 }
@@ -89,5 +90,6 @@ namespace TestApp_Intermodular.Classes
             grid.Children.Add(stackPanel2);
             return grid;
         }
+
     }   
 }

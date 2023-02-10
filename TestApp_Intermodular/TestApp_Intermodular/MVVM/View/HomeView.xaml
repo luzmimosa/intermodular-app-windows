@@ -19,7 +19,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" Text="Descubre las rutas más populares" FontSize="24"/>
+                <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Descubre las rutas más populares" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <StackPanel x:Name="ColumnA" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"/>
                 <StackPanel x:Name="ColumnB" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left"/>
             </Grid>
