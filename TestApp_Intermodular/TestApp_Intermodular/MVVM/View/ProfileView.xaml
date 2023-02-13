@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TestApp_Intermodular.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
-             Background="LightBlue">
+             Background="Transparent">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="190" />
@@ -24,7 +24,7 @@
             <Button Content="Cambiar Imagen" Click="ImageBtn_Click"  MaxWidth="100" Height="25" />
             <Button Content="Modificar Perfil" Click="ModifyProfile_Click" MaxWidth="100" Height="25" Margin="5,0,0,0"/>
         </StackPanel>
-        <Button x:Name="SaveButton" Content="Guardar" Click="SaveBtn_Click" MaxWidth="100" Height="25" Margin="5,0,200,5" Grid.Column="2" Grid.Row="2" VerticalAlignment="Bottom" Visibility="Collapsed"/>
+        <Button x:Name="SaveButton" Content="Guardar" Width="55" Click="SaveBtn_Click" MaxWidth="100" Height="25" Margin="5,0,0,35" Grid.Column="2" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Visibility="Collapsed"/>
 
 
         <TextBlock Grid.ColumnSpan="3" Grid.Row="0" Text="Información de usuario" FontSize="24" HorizontalAlignment="Center"/>
