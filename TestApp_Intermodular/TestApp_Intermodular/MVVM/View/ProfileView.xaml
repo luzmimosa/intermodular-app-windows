@@ -42,7 +42,8 @@
                        AcceptsReturn="True" 
                        TextWrapping="Wrap"
                        VerticalScrollBarVisibility="Auto"
-                       MaxHeight="170"/>
+                       MaxHeight="170"
+                       IsEnabled="False"/>
 
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">

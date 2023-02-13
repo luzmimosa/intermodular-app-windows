@@ -40,6 +40,7 @@ namespace TestApp_Intermodular.MVVM.View
         }
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
+            BiographyTextBox.Text = BiographyTextBox.Text;
             
         }
 
@@ -49,6 +50,7 @@ namespace TestApp_Intermodular.MVVM.View
             if (_enabled == true)
             {
                 SaveButton.Visibility= Visibility.Visible;
+                BiographyTextBox.IsEnabled= true;
 
                 UsernameNameTextBlock.Visibility = Visibility.Visible;
                 UsernameNameTextBox.Visibility = Visibility.Visible;
@@ -71,6 +73,7 @@ namespace TestApp_Intermodular.MVVM.View
             else 
             {
                 SaveButton.Visibility = Visibility.Collapsed;
+                BiographyTextBox.IsEnabled = false;
 
                 UsernameNameTextBlock.Visibility = Visibility.Collapsed;
                 UsernameNameTextBox.Visibility = Visibility.Collapsed;
@@ -89,6 +92,7 @@ namespace TestApp_Intermodular.MVVM.View
 
                 NewEmailTextBlock.Visibility = Visibility.Collapsed;
                 NewEmailTextBox.Visibility = Visibility.Collapsed;
+
             }
         }
     }
