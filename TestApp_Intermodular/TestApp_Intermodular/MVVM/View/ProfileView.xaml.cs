@@ -38,12 +38,18 @@ namespace TestApp_Intermodular.MVVM.View
                 Image.Source = imageSource;
             }
         }
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
 
         private void ModifyProfile_Click(object sender, RoutedEventArgs e) 
         {
             _enabled = !_enabled;
             if (_enabled == true)
             {
+                SaveButton.Visibility= Visibility.Visible;
+
                 UsernameNameTextBlock.Visibility = Visibility.Visible;
                 UsernameNameTextBox.Visibility = Visibility.Visible;
 
@@ -64,6 +70,8 @@ namespace TestApp_Intermodular.MVVM.View
             }
             else 
             {
+                SaveButton.Visibility = Visibility.Collapsed;
+
                 UsernameNameTextBlock.Visibility = Visibility.Collapsed;
                 UsernameNameTextBox.Visibility = Visibility.Collapsed;
 
