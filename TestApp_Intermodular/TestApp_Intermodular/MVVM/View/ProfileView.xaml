@@ -20,94 +20,143 @@
         </Grid.RowDefinitions>
 
         <Image x:Name="Image" Width="180" Height="170" Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="1" Margin="3,0,0,35"/>
-        <Button Content="Cambiar Imagen" Click="ImageBtn_Click" Grid.Column="0" Grid.Row="1" MaxWidth="100" Height="25" VerticalAlignment="Bottom"/>
+        <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom" Orientation="Horizontal">
+            <Button Content="Cambiar Imagen" Click="ImageBtn_Click"  MaxWidth="100" Height="25" />
+            <Button Content="Modificar Perfil" Click="ModifyProfile_Click" MaxWidth="100" Height="25" Margin="5,0,0,0"/>
+        </StackPanel>
 
-        <TextBlock Grid.ColumnSpan="3" Grid.Row="0" Text="Información de usuario." FontSize="24" HorizontalAlignment="Center"/>
 
-        <StackPanel Grid.Column="0" Grid.Row="2">
-            <TextBlock 
+        <TextBlock Grid.ColumnSpan="3" Grid.Row="0" Text="Información de usuario" FontSize="24" HorizontalAlignment="Center"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <TextBlock Text="Aquí va el nombre de usuario"
+                       FontSize="22"/>
+            <TextBlock Text="Aquí va el usuario"
+                       FontSize="18"/>
+            <TextBlock Text="Biografía"
+                       Margin="0,5,0,2"
+                       FontSize="18"/>
+            <TextBox x:Name="BiographyTextBox" 
+                       AcceptsReturn="True" 
+                       TextWrapping="Wrap"
+                       VerticalScrollBarVisibility="Auto"
+                       MaxHeight="170"/>
+
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
+            <TextBlock x:Name="UsernameTextBlock"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        Text="Nombre de usuario" 
                        FontSize="16" 
                        Foreground="Black" 
                        TextWrapping="Wrap"
-                       Margin="3,0,0,0"/>
+                       Margin="3,0,0,0"
+                       Visibility="Collapsed"/>
+            
+            <TextBlock x:Name="UsernameNameTextBlock"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Text="Usuario" 
+                       FontSize="16" 
+                       Foreground="Black" 
+                       TextWrapping="Wrap"
+                       Margin="3,5,0,0"
+                       Visibility="Collapsed"/>
 
-            <TextBlock 
+            <TextBlock x:Name="PasswordTextBlock"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        Text="Contraseña actual" 
                        FontSize="16" 
                        Foreground="Black" 
                        TextWrapping="Wrap"
-                       Margin="3,10,0,0"/>
+                       Margin="3,10,0,0"
+                       Visibility="Collapsed"/>
 
-            <TextBlock 
+            <TextBlock x:Name="NewPasswordTextBlock"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        Text="Nueva contraseña" 
                        FontSize="16" 
                        Foreground="Black" 
                        TextWrapping="Wrap"
-                       Margin="3,10,0,0"/>
-            <TextBlock 
+                       Margin="3,10,0,0"
+                       Visibility="Collapsed"/>
+            
+            <TextBlock x:Name="EmailTextBlock"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        Text="Correo electrónico actual" 
                        FontSize="16" 
                        Foreground="Black" 
                        TextWrapping="Wrap"
-                       Margin="3,10,0,0"/>
-            <TextBlock 
+                       Margin="3,10,0,0"
+                       Visibility="Collapsed"/>
+            
+            <TextBlock x:Name="NewEmailTextBlock"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
                        Text="Nuevo correo electrónico" 
                        FontSize="16" 
                        Foreground="Black" 
                        TextWrapping="Wrap"
-                       Margin="3,10,0,0"/>
+                       Margin="3,10,0,0"
+                       Visibility="Collapsed"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <TextBox x:Name="UsernameTB" 
+            <TextBox x:Name="UsernameTextBox" 
                      VerticalAlignment="Center" 
                      HorizontalAlignment="Left"
                      MinWidth="200"
                      Margin="5,5,0,0"
-                     IsEnabled="False"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="2">
-            <TextBox x:Name="PasswordTB"
+                     IsEnabled="False"
+                     Visibility="Collapsed"/>
+            
+            <TextBox x:Name="UsernameNameTextBox" 
                      VerticalAlignment="Center" 
                      HorizontalAlignment="Left"
                      MinWidth="200"
-                     Margin="5,35,0,0"
-                     IsEnabled="False"/>
+                     Margin="5,10,0,0"
+                     IsEnabled="False"
+                     Visibility="Collapsed"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <TextBox x:Name="NewPasswordTB"
+            <TextBox x:Name="PasswordTextBox"
                      VerticalAlignment="Center" 
                      HorizontalAlignment="Left"
                      MinWidth="200"
                      Margin="5,65,0,0"
-                     IsEnabled="False"/>
+                     IsEnabled="False"
+                     Visibility="Collapsed"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <TextBox x:Name="EmailTB"
+            <TextBox x:Name="NewPasswordTextBox"
                      VerticalAlignment="Center" 
                      HorizontalAlignment="Left"
                      MinWidth="200"
                      Margin="5,95,0,0"
-                     IsEnabled="False"/>
+                     IsEnabled="False"
+                     Visibility="Collapsed"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <TextBox x:Name="NewEmailTB"
+            <TextBox x:Name="EmailTextBox"
                      VerticalAlignment="Center" 
                      HorizontalAlignment="Left"
                      MinWidth="200"
                      Margin="5,125,0,0"
-                     IsEnabled="False"/>
+                     IsEnabled="False"
+                     Visibility="Collapsed"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <TextBox x:Name="NewEmailTextBox"
+                     VerticalAlignment="Center" 
+                     HorizontalAlignment="Left"
+                     MinWidth="200"
+                     Margin="5,155,0,0"
+                     IsEnabled="False"
+                     Visibility="Collapsed"/>
         </StackPanel>
     </Grid>
 </UserControl>

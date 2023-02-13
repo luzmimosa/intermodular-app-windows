@@ -22,6 +22,7 @@ namespace TestApp_Intermodular.MVVM.View
     /// </summary>
     public partial class ProfileView : UserControl
     {
+        private bool _enabled = false;
         public ProfileView()
         {
             InitializeComponent();
@@ -35,6 +36,51 @@ namespace TestApp_Intermodular.MVVM.View
                 string filePath = openFileDialog.FileName;
                 ImageSource imageSource = new BitmapImage(new Uri(filePath));
                 Image.Source = imageSource;
+            }
+        }
+
+        private void ModifyProfile_Click(object sender, RoutedEventArgs e) 
+        {
+            _enabled = !_enabled;
+            if (_enabled == true)
+            {
+                UsernameNameTextBlock.Visibility = Visibility.Visible;
+                UsernameNameTextBox.Visibility = Visibility.Visible;
+
+                UsernameTextBlock.Visibility = Visibility.Visible;
+                UsernameTextBox.Visibility = Visibility.Visible;
+
+                PasswordTextBlock.Visibility = Visibility.Visible;
+                PasswordTextBox.Visibility = Visibility.Visible;
+
+                NewPasswordTextBlock.Visibility = Visibility.Visible;
+                NewPasswordTextBox.Visibility = Visibility.Visible;
+
+                EmailTextBlock.Visibility = Visibility.Visible;
+                EmailTextBox.Visibility = Visibility.Visible;
+
+                NewEmailTextBlock.Visibility = Visibility.Visible;
+                NewEmailTextBox.Visibility = Visibility.Visible;
+            }
+            else 
+            {
+                UsernameNameTextBlock.Visibility = Visibility.Collapsed;
+                UsernameNameTextBox.Visibility = Visibility.Collapsed;
+
+                UsernameTextBlock.Visibility = Visibility.Collapsed;
+                UsernameTextBox.Visibility = Visibility.Collapsed;
+
+                PasswordTextBlock.Visibility = Visibility.Collapsed;
+                PasswordTextBox.Visibility = Visibility.Collapsed;
+
+                NewPasswordTextBlock.Visibility = Visibility.Collapsed;
+                NewPasswordTextBox.Visibility = Visibility.Collapsed;
+
+                EmailTextBlock.Visibility = Visibility.Collapsed;
+                EmailTextBox.Visibility = Visibility.Collapsed;
+
+                NewEmailTextBlock.Visibility = Visibility.Collapsed;
+                NewEmailTextBox.Visibility = Visibility.Collapsed;
             }
         }
     }
