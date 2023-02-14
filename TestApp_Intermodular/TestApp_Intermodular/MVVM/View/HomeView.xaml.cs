@@ -33,7 +33,7 @@ namespace TestApp_Intermodular.MVVM.View
             int cont = 0;
             for (int i = 0; i < number; i++)
             {
-                Grid grid = MiniRoute.ShowRoutes();
+                Grid grid = MiniRoute.ShowRoutes();              
 
                 if (cont % 2 == 0)
                 {
@@ -46,6 +46,10 @@ namespace TestApp_Intermodular.MVVM.View
                     cont++;
                 }
             }
+        }
+        private void HandleClickEvent(object sender, EventArgs e)
+        {
+            // Do something in response to the click event
         }
     }
 }

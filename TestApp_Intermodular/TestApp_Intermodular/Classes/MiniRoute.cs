@@ -13,6 +13,7 @@ namespace TestApp_Intermodular.Classes
 {
     public class MiniRoute
     {
+        public event EventHandler OnClick;
         public static string Name { get; set; }
         public static string Description { get; set; }
         public static double Length { get; set; }
@@ -90,6 +91,9 @@ namespace TestApp_Intermodular.Classes
             grid.Children.Add(stackPanel2);
             return grid;
         }
-
-    }   
+        protected virtual void RaiseOnClick()
+        {
+            OnClick?.Invoke(this, EventArgs.Empty);
+        }
+    }
 }
