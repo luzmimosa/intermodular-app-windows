@@ -13,6 +13,9 @@
     <Compile Update="MVVM\View\DiscoveryView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\ExpandedRoute.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\FavoritesView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\DiscoveryView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\ExpandedRoute.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\FavoritesView.xaml">

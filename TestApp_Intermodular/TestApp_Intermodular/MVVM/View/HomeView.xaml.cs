@@ -47,9 +47,5 @@ namespace TestApp_Intermodular.MVVM.View
                 }
             }
         }
-        private void HandleClickEvent(object sender, EventArgs e)
-        {
-            // Do something in response to the click event
-        }
     }
 }

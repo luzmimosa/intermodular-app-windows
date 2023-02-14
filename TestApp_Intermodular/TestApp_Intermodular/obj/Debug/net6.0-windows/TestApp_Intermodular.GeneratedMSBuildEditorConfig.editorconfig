@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TestApp_Intermodular
-build_property.ProjectDir = C:\Users\Senka\source\repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\
+build_property.ProjectDir = C:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\

@@ -20,9 +20,44 @@ namespace TestApp_Intermodular.MVVM.View
     /// </summary>
     public partial class ExpandedRoute : UserControl
     {
+        private List<string> imagePaths = new List<string>()
+        {
+            "path/to/image1.jpg",
+            "path/to/image2.jpg",
+            "path/to/image3.jpg",
+            // add more image paths here
+        };
+
+        private int currentImageIndex = 0;
+
         public ExpandedRoute()
         {
             InitializeComponent();
+            LoadImage();
+        }
+
+        private void LoadImage()
+        {
+            string imagePath = imagePaths[currentImageIndex];
+            RouteImage.Source = new BitmapImage(new Uri(imagePath));
+        }
+
+        private void PrevButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentImageIndex > 0)
+            {
+                currentImageIndex--;
+                LoadImage();
+            }
+        }
+
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentImageIndex < imagePaths.Count - 1)
+            {
+                currentImageIndex++;
+                LoadImage();
+            }
         }
     }
 }

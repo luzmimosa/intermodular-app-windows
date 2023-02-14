@@ -9,42 +9,52 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Image x:Name="RouteImage" 
-               Width="800" 
-               Height="220" 
+               Width="400" 
+               Height="400" 
                Grid.Column="0"
                Grid.Row="0"
                VerticalAlignment="Top"/>
 
-        <StackPanel Grid.Row="1">
-            <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <TextBlock x:Name="RouteTitleTextBox"
+        <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20">
+            <Button Content="&lt;" Width="20" Height="20" Margin="10,0" Click="PrevButton_Click"/>
+            <Button Content="&gt;" Width="20" Height="20" Margin="10,0" Click="NextButton_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock x:Name="RouteTitleTextBox"
                        Text="Titulo de la ruta" 
                        FontSize="24"
-                       Margin="10,0,0,0"/>
-                <TextBlock x:Name="RouteDistanceTextBox" 
-                           Text="Km"
-                           FontSize="22"
-                           Margin="580,0,0,0"/>
-            </StackPanel>
-            
+                       Margin="5,0,0,0"/>
+
             <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <TextBlock x:Name="RouteDifficultyTextBox"
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="RouteDifficultyTextBox"
                        Text="Dificultad de la ruta"
                        FontSize="18"
-                       Margin="10,0,0,0"/>
+                       Margin="5,0,0,0"/>
+
+                    <TextBlock x:Name="RouteDistanceTextBox" 
+                           Text="Km"
+                           FontSize="18"
+                           Margin="180,0,0,0"/>
+                </StackPanel>
             </StackPanel>
-            
             <TextBox x:Name="RouteDescriptionTextBox"
                      Background="Transparent"
                      MaxWidth="780"
                      Height="100"/>
+            <TextBlock x:Name="CommentsTextBlock"
+                       Text="Comentarios de la ruta"
+                       FontSize="18"
+                       Margin="5,0,0,0"/>
+            <StackPanel MaxWidth="390" MaxHeight="260">
+            </StackPanel>
         </StackPanel>
 
     </Grid>

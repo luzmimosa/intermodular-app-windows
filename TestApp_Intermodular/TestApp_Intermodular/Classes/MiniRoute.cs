@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using TestApp_Intermodular.MVVM.View;
@@ -89,11 +90,18 @@ namespace TestApp_Intermodular.Classes
             };
             Grid.SetColumn(stackPanel2, 1);
             grid.Children.Add(stackPanel2);
+
+            grid.MouseLeftButtonDown += new MouseButtonEventHandler(RaiseOnClick);
+
             return grid;
+
+            void RaiseOnClick(object sender, MouseEventArgs e)
+            {
+                ExpandedRoute Eroute = new ExpandedRoute();
+                MessageBox.Show("Me he expandido!");
+                
+            }
         }
-        protected virtual void RaiseOnClick()
-        {
-            OnClick?.Invoke(this, EventArgs.Empty);
-        }
+        
     }
 }
