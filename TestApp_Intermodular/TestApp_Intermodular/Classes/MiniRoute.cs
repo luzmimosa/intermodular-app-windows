@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -97,9 +98,9 @@ namespace TestApp_Intermodular.Classes
 
             void RaiseOnClick(object sender, MouseEventArgs e)
             {
-                ExpandedRoute Eroute = new ExpandedRoute();
-                MessageBox.Show("Me he expandido!");
-                
+                DetailedRouteWindow DetailedRoute = new DetailedRouteWindow();
+                DetailedRoute.ShowDialog();              
+
             }
         }
         

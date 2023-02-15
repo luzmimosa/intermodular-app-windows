@@ -1,13 +1,13 @@
-﻿C:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
-FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\App.xaml;;
+﻿
+FC:\Users\Senka\source\repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\App.xaml;;
 FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\LoginWindows.xaml;;
 FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\MainWindow.xaml;;
 FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\MVVM\View\DiscoveryView.xaml;;
-FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\MVVM\View\ExpandedRoute.xaml;;
 FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\MVVM\View\FavoritesView.xaml;;
 FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\MVVM\View\HomeView.xaml;;
 FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\MVVM\View\InitialView.xaml;;
 FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\MVVM\View\ProfileView.xaml;;
 FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\RecoverWindow.xaml;;
 FC:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\RegisterWindow.xaml;;
+FC:\Users\Senka\source\repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\DetailedRouteWindow.xaml;;
 

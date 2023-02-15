@@ -7,13 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="DetailedRouteWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="LoginWindows.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\DiscoveryView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="MVVM\View\ExpandedRoute.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\FavoritesView.xaml.cs">
@@ -36,6 +36,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="DetailedRouteWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="LoginWindows.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -43,9 +46,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\DiscoveryView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MVVM\View\ExpandedRoute.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\FavoritesView.xaml">
