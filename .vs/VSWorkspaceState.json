@@ -3,9 +3,10 @@
     "",
     "\\TestApp_Intermodular",
     "\\TestApp_Intermodular\\TestApp_Intermodular",
+    "\\TestApp_Intermodular\\TestApp_Intermodular\\Classes",
     "\\TestApp_Intermodular\\TestApp_Intermodular\\MVVM",
     "\\TestApp_Intermodular\\TestApp_Intermodular\\MVVM\\View"
   ],
-  "SelectedNode": "\\TestApp_Intermodular\\TestApp_Intermodular\\MVVM\\View\\ProfileView.xaml.cs",
+  "SelectedNode": "\\TestApp_Intermodular\\TestApp_Intermodular\\Classes\\MiniRoute.cs",
   "PreviewInSolutionExplorer": false
 }
