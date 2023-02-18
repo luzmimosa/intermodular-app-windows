@@ -102,7 +102,7 @@ namespace TestApp_Intermodular {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TestApp_Intermodular;V1.0.0.0;component/detailedroutewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TestApp_Intermodular;component/detailedroutewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\DetailedRouteWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

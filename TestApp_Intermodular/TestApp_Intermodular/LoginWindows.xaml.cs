@@ -35,6 +35,14 @@ namespace TestApp_Intermodular
             }
         }
     }
+    public static class AlphanumericChecker 
+    {
+        public static bool IsAlphanumeric(string text)
+        {
+            Regex alphanumericRegex = new Regex("^[a-zA-Z0-9]+$");
+            return alphanumericRegex.IsMatch(text);
+        }
+    }
 
     public class FileCreator
     {
@@ -55,6 +63,7 @@ namespace TestApp_Intermodular
         }
     }       //Para leer el token usar --> FileReader.ReadTextFile("TOKEN");
                                     //y luego asignar a variable --> string contents = FileReader.fileContent;
+
     public partial class LoginWindows : Window
     {
         public static string userName { get; set; }
@@ -89,63 +98,73 @@ namespace TestApp_Intermodular
                 
             }
         }
+        
+
 
         private async void LogginButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            string url = "https://intermodular.fadedbytes.com/account/login";
-
-
-            var handler = new HttpClientHandler();
-            handler.ServerCertificateCustomValidationCallback = delegate { return true; };
-            var client = new HttpClient(handler);
-
-            LoginPost post = new LoginPost()
+            string inputText = LoginUserTextBox.Text;
+            if (AlphanumericChecker.IsAlphanumeric(inputText))
             {
-                username = LoginUserTextBox.Text,
-                password = tb_password.Password
-            };
+                string url = "https://intermodular.fadedbytes.com/account/login";
 
-            var data = System.Text.Json.JsonSerializer.Serialize<LoginPost>(post);
-            HttpContent content =
-                new StringContent(data, System.Text.Encoding.UTF8, "application/json");
 
-            var httpResponse = await client.PostAsync(url, content);
+                var handler = new HttpClientHandler();
+                handler.ServerCertificateCustomValidationCallback = delegate { return true; };
+                var client = new HttpClient(handler);
 
-            if (httpResponse.IsSuccessStatusCode)
-            {
-                string responseString = await httpResponse.Content.ReadAsStringAsync();
-                HttpRequestMessage request = new HttpRequestMessage();
+                LoginPost post = new LoginPost()
+                {
+                    username = LoginUserTextBox.Text,
+                    password = tb_password.Password
+                };
+
+                var data = System.Text.Json.JsonSerializer.Serialize<LoginPost>(post);
+                HttpContent content =
+                    new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+
+                var httpResponse = await client.PostAsync(url, content);
 
                 if (httpResponse.IsSuccessStatusCode)
                 {
-                    var headers = httpResponse.Headers;
-                    string token = null;
+                    string responseString = await httpResponse.Content.ReadAsStringAsync();
+                    HttpRequestMessage request = new HttpRequestMessage();
 
-
-                    foreach (var foundToken in headers.GetValues("Authorization"))
+                    if (httpResponse.IsSuccessStatusCode)
                     {
-                        token = foundToken;
+                        var headers = httpResponse.Headers;
+                        string token = null;
+
+
+                        foreach (var foundToken in headers.GetValues("Authorization"))
+                        {
+                            token = foundToken;
+                        }
+
+                        if (token == null)
+                        {
+                            MessageBox.Show("Token not found.");
+                        }
+                        else
+                        {
+                            GlobalToken.Token = token;
+                            FileCreator fileCreator = new FileCreator();
+                            fileCreator.CreateTextFile("TOKEN", token);
+                            userName = LoginUserTextBox.Text;
+                            userPassword = tb_password.Password;
+                            test();
+
+                        }
                     }
 
-                    if (token == null)
-                    {
-                        MessageBox.Show("Token not found.");
-                    } else
-                    {
-                       GlobalToken.Token= token;
-                        FileCreator fileCreator = new FileCreator();
-                        fileCreator.CreateTextFile("TOKEN", token);
-                        userName = LoginUserTextBox.Text;
-                        userPassword= tb_password.Password;
-                        test();
-
-                    }
+                    MainWindow mw = new MainWindow();
+                    this.Close();
+                    mw.Show();
                 }
-
-                MainWindow mw = new MainWindow();
-                this.Close();
-                mw.Show();
+            }
+            else
+            {
+                MessageBox.Show("El nombre de usuario no puede tener símbolos ni espacios. Por favor, vuelve a intentarlo.");
             }
         }
 
@@ -164,5 +183,4 @@ namespace TestApp_Intermodular
         }
 
     }
-
 }

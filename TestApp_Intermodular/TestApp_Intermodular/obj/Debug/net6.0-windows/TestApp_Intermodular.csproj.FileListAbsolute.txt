@@ -381,3 +381,6 @@ C:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodu
 C:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\DetailedRouteWindow.g.cs
 C:\Users\Senka\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\DetailedRouteWindow.baml
+C:\Users\sergi\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\DetailedRouteWindow.g.cs
+C:\Users\sergi\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\sergi\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\DetailedRouteWindow.baml

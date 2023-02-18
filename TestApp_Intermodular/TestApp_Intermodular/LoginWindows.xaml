@@ -45,7 +45,8 @@
                 </StackPanel>
 
                 <StackPanel>
-                    <TextBox x:Name="LoginUserTextBox" 
+                    <TextBox x:Name="LoginUserTextBox"
+                             Text="wpf"
                              Width="250" 
                              Height="25"/>
                 </StackPanel>
@@ -57,9 +58,9 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                    <PasswordBox x:Name="tb_password" 
-                 Width="250" 
-                 Height="25">
+                    <PasswordBox x:Name="tb_password"      
+                        Width="250" 
+                        Height="25">
                         <PasswordBox.Template>
                             <ControlTemplate TargetType="{x:Type PasswordBox}">
                                 <Border CornerRadius="5" 

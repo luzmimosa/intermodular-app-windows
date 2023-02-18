@@ -70,5 +70,10 @@ namespace TestApp_Intermodular
                 LoadImage();
             }
         }
+
+        private void ImageUploadBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

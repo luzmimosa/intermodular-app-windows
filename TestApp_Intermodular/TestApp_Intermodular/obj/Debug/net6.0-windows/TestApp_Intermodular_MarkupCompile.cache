@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Senka\source\repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\
+C:\Users\sergi\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\
 TestApp_Intermodular
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Senka\source\repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\App.xaml
+C:\Users\sergi\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\App.xaml
 1311257461
 
 261973784120
-2052051306275
+205840462068
 DetailedRouteWindow.xaml;LoginWindows.xaml;MainWindow.xaml;MVVM\View\DiscoveryView.xaml;MVVM\View\FavoritesView.xaml;MVVM\View\HomeView.xaml;MVVM\View\InitialView.xaml;MVVM\View\ProfileView.xaml;RecoverWindow.xaml;RegisterWindow.xaml;Theme\MenuButtonTheme.xaml;Theme\RoundTextboxTheme.xaml;Theme\TextBoxTheme.xaml;
 
-True
+False
 
