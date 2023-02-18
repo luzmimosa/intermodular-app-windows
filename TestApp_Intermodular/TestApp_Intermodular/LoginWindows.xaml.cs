@@ -35,6 +35,7 @@ namespace TestApp_Intermodular
             }
         }
     }
+    //Metodo para comprobar que el usuario no tienen simbolos ni espacios en el login y el registro.
     public static class AlphanumericChecker 
     {
         public static bool IsAlphanumeric(string text)
@@ -152,7 +153,7 @@ namespace TestApp_Intermodular
                             fileCreator.CreateTextFile("TOKEN", token);
                             userName = LoginUserTextBox.Text;
                             userPassword = tb_password.Password;
-                            test();
+                            //test();
 
                         }
                     }

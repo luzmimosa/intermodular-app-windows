@@ -27,7 +27,10 @@ namespace TestApp_Intermodular
 
         private void Recover_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Solicitud de recuperar contraseña enviada correctamente. Si el correo coincide, recibirás un email con las instrucciones para recuperar tu contraseña.");
+            LoginWindows lg = new LoginWindows();
+            this.Close();
+            lg.Show();
         }
         private void RecoveryBack(object sender, RoutedEventArgs e)
         {

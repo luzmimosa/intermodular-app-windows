@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,12 +14,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using Newtonsoft.Json;
+using TestApp_Intermodular.Classes;
 
 namespace TestApp_Intermodular
 {
     /// <summary>
     /// Lógica de interacción para DetailedRouteWindow.xaml
     /// </summary>
+    public class RandomRoute
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public int Distance { get; set; }
+    }
     public partial class DetailedRouteWindow : Window
     {
         private List<string> imagePaths = new List<string>()
