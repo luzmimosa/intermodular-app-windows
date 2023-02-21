@@ -46,10 +46,10 @@ namespace TestApp_Intermodular
     }
     public static class KmConverter 
     {
-        public static double ConvertToKm(int meters)
+        public static float ConvertToKm(float meters)
         {
-            double kilometers = meters / 1000.0;
-            return Math.Round(kilometers, 1);
+            float kilometers = meters / 1000.0f;
+            return (float)Math.Round(kilometers, 1);
         }
     }
 

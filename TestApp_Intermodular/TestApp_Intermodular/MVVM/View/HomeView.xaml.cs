@@ -30,30 +30,28 @@ namespace TestApp_Intermodular.MVVM.View
         public HomeView()
         {
             InitializeComponent();
-            //DisplayRoutes();
-            GetRandomRouteAsync();
+            DisplayRoutes();
+            
         }
         private async void DisplayRoutes()
         {
-            RouteList = await GetRandomRouteAsync();
-            foreach (var i in RouteList) { MessageBox.Show(i.ToString()); }
+            var ruta = new List<MiniRoute>();
+            ruta = await GetRandomRouteAsync();
             int cont = 0;
-            //for (int i = 0; i < number; i++)
-            //{
-            //    MiniRoute mr = new MiniRoute();
-            //    Grid grid = mr.ShowRoutes();              
-
-            //    if (cont % 2 == 0)
-            //    {
-            //        ColumnA.Children.Add(grid);
-            //        cont++;
-            //    }
-            //    else
-            //    {
-            //        ColumnB.Children.Add(grid);
-            //        cont++;
-            //    }
-            //}
+            foreach (var i in ruta) 
+            {
+                Grid grid = i.ShowRoutes();
+                if (cont % 2 == 0)
+                    {
+                        ColumnA.Children.Add(grid);
+                        cont++;
+                    }
+                    else
+                    {
+                        ColumnB.Children.Add(grid);
+                        cont++;
+                    }
+            }
         }
 
         public async Task<List<string>> GetRandomRoutesUIDsAsync()
@@ -82,40 +80,40 @@ namespace TestApp_Intermodular.MVVM.View
         {
             var routeIds = new List<String>();
             routeIds = await GetRandomRoutesUIDsAsync();
-            var routes = new List<MiniRoute>();
-            int cont = 0;
+            var routes = new List<Route.Rootobject>();
 
-            foreach (var routeId in routeIds)
+            foreach (var i in routeIds)
             {
+                int cont=0;
                 var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
-                var url = "https://intermodular.fadedbytes.com/api/v1/route/"+routeId.ToString();
-                
+                var url = "https://intermodular.fadedbytes.com/api/v1/route/"+i;
 
                 try
-                {                    
+                {
                     var response = await client.GetAsync(url);
                     response.EnsureSuccessStatusCode();
 
                     var responseBody = await response.Content.ReadAsStringAsync();
-                    var result = JsonConvert.DeserializeObject<dynamic>(responseBody);
-                    MessageBox.Show(result.ToString());
-                    MiniRoute route = new MiniRoute
-                    {
-                        UID = result.uid,
-                        Name = result.name,
-                        Description = result.description,
-                        Length = result.distance
-                    };
-                    MessageBox.Show(route.ToString());
-                    routes.Add(route);
+                    var route = JsonConvert.DeserializeObject<Route.Rootobject>(responseBody);
+
+                    routes.Add(route);                   
+
+
+                    MiniRoute miniRoute = new MiniRoute();
+                    miniRoute.Name = route.name;
+                    miniRoute.Description = route.description;
+                    miniRoute.Length = KmConverter.ConvertToKm(route.length);
+                    miniRoute.UID = route.uid;
+                    RouteList.Add(miniRoute);
+
                 }
                 catch (HttpRequestException e)
                 {
                     Console.WriteLine($"HTTP request exception: {e.Message}");
                 }
             }
-                return routes;
+                return RouteList;
         }
     }
 }

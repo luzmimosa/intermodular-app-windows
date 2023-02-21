@@ -18,9 +18,9 @@ namespace TestApp_Intermodular.Classes
         public event EventHandler OnClick;
         public  string Name { get; set; }
         public  string Description { get; set; }
-        public  double Length { get; set; }
+        public  float Length { get; set; }
         public  bool Fav { get; set; }
-        public  bool UID { get; set; }
+        public  string UID { get; set; }
 
         public  Grid ShowRoutes() 
         {
