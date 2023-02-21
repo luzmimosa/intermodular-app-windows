@@ -29,7 +29,7 @@ namespace TestApp_Intermodular
          public MainWindow()
         {
             InitializeComponent();
-            UserLoad();
+            //UserLoad();
             welcome.Text = "Bienvenido, "+username+".";
             
         }
