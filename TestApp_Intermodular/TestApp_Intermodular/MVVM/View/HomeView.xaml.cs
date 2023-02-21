@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TestApp_Intermodular.Classes;
+using Newtonsoft.Json;
 
 namespace TestApp_Intermodular.MVVM.View
 {
@@ -26,14 +27,15 @@ namespace TestApp_Intermodular.MVVM.View
         public HomeView()
         {
             InitializeComponent();
-            DisplayRoutes(13);
+            //DisplayRoutes(13);
         }
         private void DisplayRoutes(int number)
         {
             int cont = 0;
             for (int i = 0; i < number; i++)
             {
-                Grid grid = MiniRoute.ShowRoutes();              
+                MiniRoute mr = new MiniRoute();
+                Grid grid = mr.ShowRoutes();              
 
                 if (cont % 2 == 0)
                 {
@@ -45,6 +47,43 @@ namespace TestApp_Intermodular.MVVM.View
                     ColumnB.Children.Add(grid);
                     cont++;
                 }
+            }
+        }
+
+        private async void getRandomRoutesUIDs()
+        {
+            var client = new HttpClient();
+            var url = "https://intermodular.fadedbytes.com/api/v1/randomroutes";
+
+            try
+            {
+                var response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                var responseBody = await response.Content.ReadAsStringAsync();
+                var ids = JsonConvert.DeserializeObject<dynamic>(responseBody);
+
+                var miniRoutes = new List<MiniRoute>();
+                foreach (var id in ids)
+                {
+                    //// Create a new instance of MiniRoute for each ID
+                    //var miniRoute = new MiniRoute
+                    //{
+                    //    Name = $"{id}",
+                    //    Description = $"{id}",
+                    //    Length = id * 2.5, // Example calculation
+                    //    Fav = false,
+                    //    UID = false
+                    //};
+
+                    //// Add the MiniRoute to the list
+                    //miniRoutes.Add(miniRoute);
+                }
+
+                // Use the miniRoutes list as needed...
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"HTTP request exception: {e.Message}");
             }
         }
     }

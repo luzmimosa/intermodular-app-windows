@@ -83,24 +83,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sergi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Senka\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sergi\\Source\\Repos\\luzmimosa\\intermodular-app-windows\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
+      "projectUniqueName": "C:\\Users\\Senka\\Source\\Repos\\luzmimosa\\intermodular-app-windows\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
       "projectName": "TestApp_Intermodular",
-      "projectPath": "C:\\Users\\sergi\\Source\\Repos\\luzmimosa\\intermodular-app-windows\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
-      "packagesPath": "C:\\Users\\sergi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sergi\\Source\\Repos\\luzmimosa\\intermodular-app-windows\\TestApp_Intermodular\\TestApp_Intermodular\\obj\\",
+      "projectPath": "C:\\Users\\Senka\\Source\\Repos\\luzmimosa\\intermodular-app-windows\\TestApp_Intermodular\\TestApp_Intermodular\\TestApp_Intermodular.csproj",
+      "packagesPath": "C:\\Users\\Senka\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Senka\\Source\\Repos\\luzmimosa\\intermodular-app-windows\\TestApp_Intermodular\\TestApp_Intermodular\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sergi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Senka\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

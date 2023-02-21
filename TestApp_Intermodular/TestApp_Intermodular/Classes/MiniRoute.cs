@@ -16,13 +16,13 @@ namespace TestApp_Intermodular.Classes
     public class MiniRoute
     {
         public event EventHandler OnClick;
-        public static string Name { get; set; }
-        public static string Description { get; set; }
-        public static double Length { get; set; }
-        public static bool Fav { get; set; }
-        public static bool UID { get; set; }
+        public  string Name { get; set; }
+        public  string Description { get; set; }
+        public  double Length { get; set; }
+        public  bool Fav { get; set; }
+        public  bool UID { get; set; }
 
-        public static Grid ShowRoutes() 
+        public  Grid ShowRoutes() 
         {
 
             //var dataContext = new MiniRoute

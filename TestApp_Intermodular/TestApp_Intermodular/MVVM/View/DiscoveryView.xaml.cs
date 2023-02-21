@@ -30,7 +30,8 @@ namespace TestApp_Intermodular.MVVM.View
             int cont = 0;
             for (int i = 0; i < number; i++)
             {
-                Grid grid = MiniRoute.ShowRoutes();
+                MiniRoute miniRoute= new MiniRoute();
+                Grid grid = miniRoute.ShowRoutes();
                 if (cont % 2 == 0)
                 {
                     ColumnA.Children.Add(grid);

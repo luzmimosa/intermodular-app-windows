@@ -86,5 +86,23 @@ namespace TestApp_Intermodular
         {
 
         }
+        private void DisplayComments(int number)
+        {
+            int cont = 0;
+            for (int i = 0; i < number; i++)
+            {
+                Grid grid = Commentary.CommentGrid();
+                if (cont % 2 == 0)
+                {
+                    ColumnA.Children.Add(grid);
+                    cont++;
+                }
+                else
+                {
+                    ColumnB.Children.Add(grid);
+                    cont++;
+                }
+            }
+        }
     }
 }

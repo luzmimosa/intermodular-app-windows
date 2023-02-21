@@ -71,8 +71,25 @@
                        Text="Comentarios de la ruta"
                        FontSize="18"
                        Margin="5,0,0,0"/>
-            <StackPanel MaxWidth="390" MaxHeight="260">
-            </StackPanel>
+            <ScrollViewer>
+                <StackPanel x:Name="FatherStackPanel"
+                    HorizontalAlignment="Center"
+                    MaxWidth="390" 
+                    MaxHeight="260">
+                    <Grid x:Name="DisplayCommentsGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel x:Name="ColumnA" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left"/>
+                        <StackPanel x:Name="ColumnB" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left"/>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
         </StackPanel>
     </Grid>
 </Window>
