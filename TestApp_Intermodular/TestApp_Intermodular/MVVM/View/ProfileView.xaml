@@ -30,20 +30,27 @@
         <TextBlock Grid.ColumnSpan="3" Grid.Row="0" Text="Información de usuario" FontSize="24" HorizontalAlignment="Center"/>
 
         <StackPanel Grid.Column="1" Grid.Row="1">
-            <TextBlock Text="Aquí va el nombre de usuario"
-                       Grid.ColumnSpan="3"
-                       FontSize="22"/>
-            <TextBlock Text="Aquí va el usuario"
-                       FontSize="18"/>
-            <TextBlock Text="Biografía"
-                       Margin="0,5,0,2"
-                       FontSize="18"/>
+            <TextBlock x:Name="NameTextBlock"
+                Text="Aquí va el nombre de usuario"
+                Grid.ColumnSpan="3"
+                FontSize="22"/>
+            <TextBlock x:Name="UserTextBlock"
+                Text="Aquí va el usuario"
+                 FontSize="18"/>
+            <TextBlock x:Name="BioTextBlock"
+                Text="Biografía"
+                Margin="0,5,0,2"
+                FontSize="18"/>
+            <TextBlock x:Name="BioDescriptionTextBlock"
+                Text="Descripción de la biografía"
+                Margin="0,5,0,2"
+                FontSize="16"/>
             <TextBox x:Name="BiographyTextBox" 
-                       AcceptsReturn="True" 
-                       TextWrapping="Wrap"
-                       VerticalScrollBarVisibility="Auto"
-                       MaxHeight="170"
-                       IsEnabled="False"/>
+                AcceptsReturn="True" 
+                TextWrapping="Wrap"
+                VerticalScrollBarVisibility="Auto"
+                MaxHeight="170"
+                Visibility="Collapsed"/>
 
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">

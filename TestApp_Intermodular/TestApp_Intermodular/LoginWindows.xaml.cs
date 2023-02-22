@@ -35,6 +35,10 @@ namespace TestApp_Intermodular
             }
         }
     }
+    public static class CurrentUser
+    {
+        public static string username { get; set; }
+    }
     //Metodo para comprobar que el usuario no tienen simbolos ni espacios en el login y el registro.
     public static class AlphanumericChecker 
     {
@@ -135,7 +139,7 @@ namespace TestApp_Intermodular
                             userPassword = tb_password.Password;
                         }
                     }
-
+                    CurrentUser.username = await GetUserAsync(LoginUserTextBox.Text);                   
                     MainWindow mw = new MainWindow();
                     this.Close();
                     mw.Show();
@@ -159,6 +163,17 @@ namespace TestApp_Intermodular
             RecoverWindow rw = new RecoverWindow();
             this.Close();
             rw.Show();
+        }
+
+        public static async Task<String> GetUserAsync(String username)
+        {
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
+            var response = await httpClient.GetAsync("https://intermodular.fadedbytes.com/api/v1/user/"+username);
+
+            var json = await response.Content.ReadAsStringAsync();
+            var user = JsonConvert.DeserializeObject<User>(json);
+            return username;
         }
 
     }

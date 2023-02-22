@@ -50,7 +50,7 @@ namespace TestApp_Intermodular.MVVM.View
             if (_enabled == true)
             {
                 SaveButton.Visibility= Visibility.Visible;
-                BiographyTextBox.IsEnabled= true;
+                BiographyTextBox.Visibility = Visibility.Visible;
 
                 UsernameNameTextBlock.Visibility = Visibility.Visible;
                 UsernameNameTextBox.Visibility = Visibility.Visible;
@@ -73,7 +73,7 @@ namespace TestApp_Intermodular.MVVM.View
             else 
             {
                 SaveButton.Visibility = Visibility.Collapsed;
-                BiographyTextBox.IsEnabled = false;
+                BiographyTextBox.Visibility=Visibility.Collapsed;
 
                 UsernameNameTextBlock.Visibility = Visibility.Collapsed;
                 UsernameNameTextBox.Visibility = Visibility.Collapsed;
