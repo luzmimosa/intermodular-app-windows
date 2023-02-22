@@ -90,8 +90,8 @@
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding DiscoveryViewCommand}"/>
 
-                <RadioButton x:Name="Favoritos" 
-                             Content="Favoritos"
+                <RadioButton x:Name="Administrador" 
+                             Content="Administrador"
                              Height="50"
                              Foreground="Black"
                              FontSize="14"

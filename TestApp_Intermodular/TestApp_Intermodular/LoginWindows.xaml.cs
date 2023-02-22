@@ -38,6 +38,8 @@ namespace TestApp_Intermodular
     public static class CurrentUser
     {
         public static string username { get; set; }
+        public static string password { get; set; }
+        public static string email { get; set; }
     }
     //Metodo para comprobar que el usuario no tienen simbolos ni espacios en el login y el registro.
     public static class AlphanumericChecker 
@@ -139,7 +141,8 @@ namespace TestApp_Intermodular
                             userPassword = tb_password.Password;
                         }
                     }
-                    CurrentUser.username = await GetUserAsync(LoginUserTextBox.Text);                   
+                    CurrentUser.username = await GetUserAsync(LoginUserTextBox.Text);
+                    CurrentUser.password = tb_password.Password;
                     MainWindow mw = new MainWindow();
                     this.Close();
                     mw.Show();

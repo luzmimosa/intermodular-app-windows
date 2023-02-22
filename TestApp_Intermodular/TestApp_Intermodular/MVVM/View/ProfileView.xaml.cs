@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,7 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
-
+using Newtonsoft.Json;
+using TestApp_Intermodular.Classes;
 
 namespace TestApp_Intermodular.MVVM.View
 {
@@ -26,6 +28,7 @@ namespace TestApp_Intermodular.MVVM.View
         public ProfileView()
         {
             InitializeComponent();
+            AssignUserValues();
         }
         private void ImageBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -40,8 +43,22 @@ namespace TestApp_Intermodular.MVVM.View
         }
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            BiographyTextBox.Text = BiographyTextBox.Text;
-            
+            BioDescriptionTextBlock.Text = BiographyTextBox.Text;
+            NameTextBlock.Text = NameTextBox.Text;
+            UserTextBlock.Text = UserTextBox.Text;
+
+            _enabled = !_enabled;
+
+            SaveButton.Visibility = Visibility.Collapsed;
+            BiographyTextBox.Visibility = Visibility.Collapsed;
+            BioDescriptionTextBlock.Visibility = Visibility.Visible;
+
+            NameTextBlock.Visibility = Visibility.Visible;
+            NameTextBox.Visibility = Visibility.Collapsed;
+
+            UserTextBlock.Visibility = Visibility.Visible;
+            UserTextBox.Visibility = Visibility.Collapsed;
+
         }
 
         private void ModifyProfile_Click(object sender, RoutedEventArgs e) 
@@ -51,49 +68,50 @@ namespace TestApp_Intermodular.MVVM.View
             {
                 SaveButton.Visibility= Visibility.Visible;
                 BiographyTextBox.Visibility = Visibility.Visible;
+                BioDescriptionTextBlock.Visibility = Visibility.Collapsed;
 
-                UsernameNameTextBlock.Visibility = Visibility.Visible;
-                UsernameNameTextBox.Visibility = Visibility.Visible;
+                NameTextBlock.Visibility = Visibility.Collapsed;
+                NameTextBox.Visibility = Visibility.Visible;
 
-                UsernameTextBlock.Visibility = Visibility.Visible;
-                UsernameTextBox.Visibility = Visibility.Visible;
-
-                PasswordTextBlock.Visibility = Visibility.Visible;
-                PasswordTextBox.Visibility = Visibility.Visible;
-
-                NewPasswordTextBlock.Visibility = Visibility.Visible;
-                NewPasswordTextBox.Visibility = Visibility.Visible;
-
-                EmailTextBlock.Visibility = Visibility.Visible;
-                EmailTextBox.Visibility = Visibility.Visible;
-
-                NewEmailTextBlock.Visibility = Visibility.Visible;
-                NewEmailTextBox.Visibility = Visibility.Visible;
+                UserTextBlock.Visibility = Visibility.Collapsed;
+                UserTextBox.Visibility = Visibility.Visible;
             }
             else 
             {
                 SaveButton.Visibility = Visibility.Collapsed;
                 BiographyTextBox.Visibility=Visibility.Collapsed;
+                BioDescriptionTextBlock.Visibility = Visibility.Visible;
 
-                UsernameNameTextBlock.Visibility = Visibility.Collapsed;
-                UsernameNameTextBox.Visibility = Visibility.Collapsed;
+                NameTextBlock.Visibility = Visibility.Visible;
+                NameTextBox.Visibility = Visibility.Collapsed;
 
-                UsernameTextBlock.Visibility = Visibility.Collapsed;
-                UsernameTextBox.Visibility = Visibility.Collapsed;
-
-                PasswordTextBlock.Visibility = Visibility.Collapsed;
-                PasswordTextBox.Visibility = Visibility.Collapsed;
-
-                NewPasswordTextBlock.Visibility = Visibility.Collapsed;
-                NewPasswordTextBox.Visibility = Visibility.Collapsed;
-
-                EmailTextBlock.Visibility = Visibility.Collapsed;
-                EmailTextBox.Visibility = Visibility.Collapsed;
-
-                NewEmailTextBlock.Visibility = Visibility.Collapsed;
-                NewEmailTextBox.Visibility = Visibility.Collapsed;
-
+                UserTextBlock.Visibility = Visibility.Visible;
+                UserTextBox.Visibility = Visibility.Collapsed;
             }
+        }
+
+        //Metodo para recuperar información del usuario
+        public static async Task<User> GetCurrentUserAsync()
+        {
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
+            var response = await httpClient.GetAsync("https://intermodular.fadedbytes.com/api/v1/user/" + CurrentUser.username);
+
+            var json = await response.Content.ReadAsStringAsync();
+            var user = JsonConvert.DeserializeObject<User>(json);
+            return user;
+        }
+
+        public async void AssignUserValues()
+        {
+            var currentUser = await GetCurrentUserAsync();
+
+            NameTextBlock.Text = currentUser.displayName;
+            NameTextBox.Text = currentUser.displayName;
+            UserTextBlock.Text = currentUser.username;
+            UserTextBox.Text = currentUser.username;
+            BioDescriptionTextBlock.Text = currentUser.biography;
+            BiographyTextBox.Text = currentUser.biography;
         }
     }
 }
