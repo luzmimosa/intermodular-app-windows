@@ -30,8 +30,7 @@ namespace TestApp_Intermodular.MVVM.View
         public HomeView()
         {
             InitializeComponent();
-            DisplayRoutes();
-            
+            DisplayRoutes();           
         }
         private async void DisplayRoutes()
         {
@@ -53,7 +52,6 @@ namespace TestApp_Intermodular.MVVM.View
                     }
             }
         }
-
         public async Task<List<string>> GetRandomRoutesUIDsAsync()
         {
             var client = new HttpClient();
@@ -105,6 +103,9 @@ namespace TestApp_Intermodular.MVVM.View
                     miniRoute.Description = route.description;
                     miniRoute.Length = KmConverter.ConvertToKm(route.length);
                     miniRoute.UID = route.uid;
+                    miniRoute.difficulty= route.difficulty;
+                    miniRoute.creator= route.creator;
+                    miniRoute.creationDatetime= route.creationDatetime;
                     RouteList.Add(miniRoute);
 
                 }

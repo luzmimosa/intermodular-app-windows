@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TestApp_Intermodular",
+    "\\TestApp_Intermodular\\TestApp_Intermodular",
+    "\\TestApp_Intermodular\\TestApp_Intermodular\\MVVM",
+    "\\TestApp_Intermodular\\TestApp_Intermodular\\MVVM\\View"
   ],
+  "SelectedNode": "\\TestApp_Intermodular\\TestApp_Intermodular\\MVVM\\View\\FavoritesView.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -65,12 +66,6 @@ namespace TestApp_Intermodular
             }
         }
 
-        private void ImageUploadBtn_Click(object sender, RoutedEventArgs e, string filePath) 
-        {
-            ImageSource imageSource = new BitmapImage(new Uri(filePath));
-            RouteImage.Source = imageSource;
-            imagePaths.Add(filePath);
-        }
         private void ImageDeleteBtn_Click(object sender, RoutedEventArgs e) { }
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
@@ -82,10 +77,39 @@ namespace TestApp_Intermodular
             }
         }
 
-        private void ImageUploadBtn_Click(object sender, RoutedEventArgs e)
+        private async void ImageUploadBtn_Click(object sender, RoutedEventArgs e)
         {
+            var openFileDialog = new OpenFileDialog();
 
+            openFileDialog.Filter = "Image Files (*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+
+            var result = openFileDialog.ShowDialog();
+
+            if (result == true)
+            {
+                var selectedFile = openFileDialog.FileName;
+                var fileStream = new FileStream(selectedFile, FileMode.Open, FileAccess.Read);
+                var content = new StreamContent(fileStream);
+
+                var httpClient = new HttpClient();
+
+                MessageBox.Show(content.ToString());
+
+                httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
+                var response = await httpClient.PostAsync("https://intermodular.fadedbytes.com/image", content);
+                MessageBox.Show(response.ToString());
+
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Imagen subida.");
+                }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error en la carga de la imagen.");
+                }
+            }
         }
+
         private void DisplayComments(int number)
         {
             int cont = 0;

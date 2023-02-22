@@ -21,8 +21,15 @@ namespace TestApp_Intermodular.Classes
         public  float Length { get; set; }
         public  bool Fav { get; set; }
         public  string UID { get; set; }
+        public string difficulty { get; set; }
+        public string creator { get; set; }
+        public long creationDatetime { get; set; }
+        public int creationDay { get { return new DateTime(creationDatetime).Day; } }
+        public int creationMonth { get { return new DateTime(creationDatetime).Month; } }
+        public int creationYear { get { return new DateTime(creationDatetime).Year; } }
 
-        public  Grid ShowRoutes() 
+
+        public Grid ShowRoutes() 
         {
 
             //var dataContext = new MiniRoute
@@ -99,6 +106,12 @@ namespace TestApp_Intermodular.Classes
             void RaiseOnClick(object sender, MouseEventArgs e)
             {
                 DetailedRouteWindow DetailedRoute = new DetailedRouteWindow();
+                DetailedRoute.RouteTitleTextBox.Text = this.Name;
+                DetailedRoute.RouteDescriptionTextBox.Text = this.Description;
+                DetailedRoute.RouteDistanceTextBox.Text = this.Length.ToString()+"Km";
+                DetailedRoute.RouteDifficultyTextBox.Text = "Dificultad: "+this.difficulty;
+                DetailedRoute.RouteAuthorTextBox.Text = "Autor: " + this.creator;
+                DetailedRoute.RouteCreationDateTextBox.Text = "Fecha: " + this.creationDay + "/" + this.creationMonth + "/" + this.creationYear;
                 DetailedRoute.ShowDialog();              
 
             }
