@@ -18,9 +18,11 @@ namespace TestApp_Intermodular.MVVM.ViewModel
         public RelayCommand FavoritesViewCommand { get; set; }
         public RelayCommand ProfileViewCommand { get; set; }
         public RelayCommand InitialViewCommand { get; set; }
+        public RelayCommand AdminViewCommand { get; set; }
 
 
         public HomeViewModel HomeVM { get; set; }
+        public AdminViewModel AdminVM { get; set; }
         public DiscoveryViewModel DiscoveryVM { get; set; }
         public ProfileViewModel ProfileVM { get; set; }
         public FavoritesViewModel FavVM { get; set; }
@@ -44,6 +46,7 @@ namespace TestApp_Intermodular.MVVM.ViewModel
             FavVM = new FavoritesViewModel();
             ProfileVM = new ProfileViewModel();
             InitialVM = new InitialViewModel();
+            AdminVM = new AdminViewModel();
 
             CurrentView =HomeVM;
 
@@ -67,7 +70,10 @@ namespace TestApp_Intermodular.MVVM.ViewModel
             {
                 CurrentView = InitialVM;
             });
-
+            AdminViewCommand = new RelayCommand(action =>
+            {
+                CurrentView = AdminVM;
+            });
         }
     }
 }

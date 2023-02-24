@@ -75,10 +75,12 @@
                Background="Transparent"
                MaxWidth="290"
                MaxHeight="100"/>
+            
             <TextBlock x:Name="CommentsTextBlock"
                Text="Comentarios de la ruta"
                FontSize="14"
                Margin="5,0,0,0"/>
+
             <ScrollViewer>
                 <StackPanel x:Name="FatherStackPanel"
                     HorizontalAlignment="Center"
@@ -104,7 +106,7 @@
                     </Grid>
                 </StackPanel>
             </ScrollViewer>
-
+            
             <Grid VerticalAlignment="Bottom">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

@@ -24,6 +24,7 @@ namespace TestApp_Intermodular.MVVM.View
     /// </summary>
     public partial class ProfileView : UserControl
     {
+        static String usuario, nombre, biografia;
         private bool _enabled = false;
         public ProfileView()
         {
@@ -59,6 +60,31 @@ namespace TestApp_Intermodular.MVVM.View
             UserTextBlock.Visibility = Visibility.Visible;
             UserTextBox.Visibility = Visibility.Collapsed;
 
+            usuario = UserTextBlock.Text;
+            nombre= NameTextBox.Text;
+            biografia = BioDescriptionTextBlock.Text;
+            ModifyUserAsync();
+
+        }
+
+        public static async Task<string> ModifyUserAsync()
+        {
+            using (var client = new HttpClient())
+            {
+                var data = new
+                {
+                    username = usuario,
+                    displayName = nombre,
+                    biography = biografia
+                };
+                var content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
+
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
+                var response = await client.PostAsync("https://intermodular.fadedbytes.com/account/modify", content);
+
+                MessageBox.Show(response.ToString());
+                return await response.Content.ReadAsStringAsync();
+            }
         }
 
         private void ModifyProfile_Click(object sender, RoutedEventArgs e) 

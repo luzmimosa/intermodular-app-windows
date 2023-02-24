@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TestApp_Intermodular.Classes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TestApp_Intermodular.MVVM.View
 {
@@ -24,27 +25,36 @@ namespace TestApp_Intermodular.MVVM.View
         public FavoritesView()
         {
             InitializeComponent();
-            DisplayRoutes(23);
-        }
-        private void DisplayRoutes(int number)
-        {
-            int cont = 0;
-            for (int i = 0; i < number; i++)
-            {
-                MiniRoute mr = new MiniRoute();   
-                Grid grid = mr.ShowRoutes();
+            var stackPanel = new StackPanel();
 
-                if (cont % 2 == 0)
-                {
-                    ColumnA.Children.Add(grid);
-                    cont++;
-                }
-                else
-                {
-                    ColumnB.Children.Add(grid);
-                    cont++;
-                }
+            for (int i = 0; i < 10; i++)
+            {
+                var sp = new UserList();
+                var ul = sp.DisplayList();
+                stackPanel.Children.Add(ul);
             }
+
+            scrollViewer.Content = stackPanel;
+
         }
+        //private void DisplayRoutes(int number)
+        //{
+        //    int cont = 0;
+        //    for (int i = 0; i < number; i++)
+        //    {
+        //        //Grid grid = Commentary.CommentGrid();
+        //        StackPanel grid = UserList.DisplayList();
+        //        if (cont % 2 == 0)
+        //        {
+        //            ColumnA.Children.Add(grid);
+        //            cont++;
+        //        }
+        //        else
+        //        {
+        //            ColumnA.Children.Add(grid);
+        //            cont++;
+        //        }
+        //    }
+        //}
     }
 }

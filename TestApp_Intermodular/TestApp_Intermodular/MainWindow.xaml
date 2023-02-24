@@ -53,24 +53,6 @@
                        Grid.Column="1"/>
 
             <StackPanel Grid.Row="1">
-                <!--<RadioButton x:Name="login" 
-                             Content="Iniciar sesión"
-                             Height="50"
-                             Foreground="Black"
-                             FontSize="14"
-                             Visibility="Visible"
-                             Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding LogInViewCommand}"/>
-
-                <RadioButton x:Name="Register" 
-                             Content="Registrarse"
-                             Height="50"
-                             Foreground="Black"
-                             FontSize="14"
-                             Visibility="Visible"
-                             Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding RegisterViewCommand}"/>-->
-
                 <RadioButton Content="Inicio"
                              x:Name="Inicio"
                              Height="50"
@@ -97,7 +79,7 @@
                              FontSize="14"
                              Visibility="Visible"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding FavoritesViewCommand}"/>
+                             Command="{Binding AdminViewCommand}"/>
 
                 <RadioButton x:Name="Perfil" 
                              Content="Perfil"

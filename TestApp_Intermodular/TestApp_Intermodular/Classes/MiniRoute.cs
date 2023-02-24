@@ -32,19 +32,10 @@ namespace TestApp_Intermodular.Classes
         public Grid ShowRoutes() 
         {
 
-            //var dataContext = new MiniRoute
-            //{
-            //    Title = " ",
-            //    Subtitle = "Descripción breve de la ruta",
-            //    Number = "kilómetros",
-            //    Fav = false
-            //};
-
             var grid = new Grid
             {
                 Height = 150,
                 Width = 300,
-                //DataContext = dataContext,
                 Background = Brushes.DarkGray,
                 Margin = new Thickness(5)
             };

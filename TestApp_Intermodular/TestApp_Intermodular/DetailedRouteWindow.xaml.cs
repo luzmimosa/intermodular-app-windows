@@ -47,6 +47,7 @@ namespace TestApp_Intermodular
         {
             InitializeComponent();
             LoadImage();
+            DisplayComments(1);
         }
         private void CloseWindow_Click(object sender, RoutedEventArgs e) {
             this.Close();
@@ -116,6 +117,7 @@ namespace TestApp_Intermodular
             for (int i = 0; i < number; i++)
             {
                 Grid grid = Commentary.CommentGrid();
+                //StackPanel grid = UserList.DisplayList();
                 if (cont % 2 == 0)
                 {
                     ColumnA.Children.Add(grid);

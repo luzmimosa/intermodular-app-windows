@@ -78,7 +78,6 @@ namespace TestApp_Intermodular.MVVM.View
         {
             var routeIds = new List<String>();
             routeIds = await GetRandomRoutesUIDsAsync();
-            var routes = new List<Route.Rootobject>();
 
             foreach (var i in routeIds)
             {
@@ -93,10 +92,7 @@ namespace TestApp_Intermodular.MVVM.View
                     response.EnsureSuccessStatusCode();
 
                     var responseBody = await response.Content.ReadAsStringAsync();
-                    var route = JsonConvert.DeserializeObject<Route.Rootobject>(responseBody);
-
-                    routes.Add(route);                   
-
+                    var route = JsonConvert.DeserializeObject<Route.Rootobject>(responseBody);                
 
                     MiniRoute miniRoute = new MiniRoute();
                     miniRoute.Name = route.name;

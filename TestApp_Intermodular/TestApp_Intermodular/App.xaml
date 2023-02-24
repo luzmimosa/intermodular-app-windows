@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:viewModel="clr-namespace:TestApp_Intermodular.MVVM.ViewModel"
              xmlns:view="clr-namespace:TestApp_Intermodular.MVVM.View"
-             xmlns:local="clr-namespace:TestApp_Intermodular.MVVM.ViewModel"
              StartupUri="LoginWindows.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -15,6 +14,10 @@
 
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:AdminViewModel}">
+                <view:AdminView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type viewModel:InitialViewModel}">
