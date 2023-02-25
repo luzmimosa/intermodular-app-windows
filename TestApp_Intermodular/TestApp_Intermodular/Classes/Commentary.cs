@@ -12,7 +12,7 @@ namespace TestApp_Intermodular.Classes
     public class Commentary
     {
         private static string _content;
-        private static DateTime _date;
+        //private static DateTime _date;
         private static string _user;
         private static bool _isAdmin;
 
@@ -22,11 +22,11 @@ namespace TestApp_Intermodular.Classes
             set { _content = value; }
         }
 
-        public DateTime Date
-        {
-            get { return _date; }
-            set { _date = value; }
-        }
+        //public DateTime Date
+        //{
+        //    get { return _date; }
+        //    set { _date = value; }
+        //}
 
         public string User
         {
@@ -55,7 +55,7 @@ namespace TestApp_Intermodular.Classes
             TextBlock contentTextBlock = new TextBlock();
             contentTextBlock.Text = _content;
             TextBlock dateTextBlock = new TextBlock();
-            dateTextBlock.Text =_date.ToString();
+            //dateTextBlock.Text =_date.ToString();
 
             stackPanel.Children.Add(userTextBlock);
             stackPanel.Children.Add(contentTextBlock);

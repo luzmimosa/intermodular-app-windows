@@ -26,10 +26,10 @@
             <Button Content="Borrar Imagen" Click="ImageDeleteBtn_Click"  MaxWidth="100" Height="25" Margin="10,0,0,0"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20">
+        <!--<StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20">
             <Button Content="&lt;" Width="20" Height="20" Margin="10,0" Click="PrevButton_Click"/>
             <Button Content="&gt;" Width="20" Height="20" Margin="10,0" Click="NextButton_Click"/>
-        </StackPanel>
+        </StackPanel>-->
 
         <StackPanel Grid.Column="1">
             <Grid>
@@ -75,7 +75,7 @@
                Background="Transparent"
                MaxWidth="290"
                MaxHeight="100"/>
-            
+
             <TextBlock x:Name="CommentsTextBlock"
                Text="Comentarios de la ruta"
                FontSize="14"
@@ -106,7 +106,7 @@
                     </Grid>
                 </StackPanel>
             </ScrollViewer>
-            
+
             <Grid VerticalAlignment="Bottom">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -118,7 +118,14 @@
                    HorizontalAlignment="Left"
                    Margin="5,0,0,0"/>
             </Grid>
+            <Button x:Name="DeleteRouteButton"
+                Content="Eliminar ruta" 
+                Width="70" Height="20" 
+                Margin="0,10,0,0" 
+                Click="DeleteRoute_Click" 
+                Background="#ba5812"
+                HorizontalAlignment="Center"
+                Visibility="Collapsed"/>
         </StackPanel>
-
     </Grid>
 </Window>

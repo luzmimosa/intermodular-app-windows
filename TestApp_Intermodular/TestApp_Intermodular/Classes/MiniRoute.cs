@@ -23,10 +23,6 @@ namespace TestApp_Intermodular.Classes
         public  string UID { get; set; }
         public string difficulty { get; set; }
         public string creator { get; set; }
-        public long creationDatetime { get; set; }
-        public int creationDay { get { return new DateTime(creationDatetime).Day; } }
-        public int creationMonth { get { return new DateTime(creationDatetime).Month; } }
-        public int creationYear { get { return new DateTime(creationDatetime).Year; } }
 
 
         public Grid ShowRoutes() 
@@ -98,10 +94,15 @@ namespace TestApp_Intermodular.Classes
             {
                 DetailedRouteWindow DetailedRoute = new DetailedRouteWindow();
                 DetailedRoute.RouteTitleTextBox.Text = this.Name;
+                DetailedRoute.uid = this.UID;
                 DetailedRoute.RouteDescriptionTextBox.Text = this.Description;
                 DetailedRoute.RouteDistanceTextBox.Text = this.Length.ToString()+"Km";
                 DetailedRoute.RouteDifficultyTextBox.Text = "Dificultad: "+this.difficulty;
                 DetailedRoute.RouteAuthorTextBox.Text = "Autor: " + this.creator;
+                if (CurrentUser.username.Equals("goose") || CurrentUser.username.Equals(this.creator))
+                {
+                    DetailedRoute.DeleteRouteButton.Visibility = Visibility.Visible;
+                }
                 DetailedRoute.ShowDialog();              
 
             }

@@ -103,7 +103,6 @@ namespace TestApp_Intermodular.MVVM.View
                     miniRoute.UID = route.uid;
                     miniRoute.difficulty = route.difficulty;
                     miniRoute.creator = route.creator;
-                    miniRoute.creationDatetime = route.creationDatetime;
                     RouteList.Add(miniRoute);
 
                 }

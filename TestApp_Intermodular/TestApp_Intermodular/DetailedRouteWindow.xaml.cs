@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,93 +21,72 @@ using TestApp_Intermodular.Classes;
 
 namespace TestApp_Intermodular
 {
-    /// <summary>
-    /// Lógica de interacción para DetailedRouteWindow.xaml
-    /// </summary>
-    public class RandomRoute
-    {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
-        public int Distance { get; set; }
-    }
     public partial class DetailedRouteWindow : Window
     {
-        private List<string> imagePaths = new List<string>()
-        {
-            "path/to/image1.jpg",
-            "path/to/image2.jpg",
-            "path/to/image3.jpg",
-            // add more image paths here
-        };
-
-        private int currentImageIndex = 0;
-
+        public String uid { get; set; }
         public DetailedRouteWindow()
         {
             InitializeComponent();
             LoadImage();
-            DisplayComments(1);
         }
         private void CloseWindow_Click(object sender, RoutedEventArgs e) {
             this.Close();
         }
         private void LoadImage()
         {
-            string imagePath = imagePaths[currentImageIndex];
-            //RouteImage.Source = new BitmapImage(new Uri(imagePath));
+            
         }
 
-        private void PrevButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (currentImageIndex > 0)
-            {
-                currentImageIndex--;
-                LoadImage();
-            }
-        }
+        //private void PrevButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (currentImageIndex > 0)
+        //    {
+        //        currentImageIndex--;
+        //        LoadImage();
+        //    }
+        //}
 
         private void ImageDeleteBtn_Click(object sender, RoutedEventArgs e) { }
-
-        private void NextButton_Click(object sender, RoutedEventArgs e)
+        private void DeleteRoute_Click(object sender, RoutedEventArgs e) 
         {
-            if (currentImageIndex < imagePaths.Count - 1)
-            {
-                currentImageIndex++;
-                LoadImage();
-            }
+            DeleteRoute(this.uid);
         }
+
+        //private void NextButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (currentImageIndex < imagePaths.Count - 1)
+        //    {
+        //        currentImageIndex++;
+        //        LoadImage();
+        //    }
+        //}
 
         private async void ImageUploadBtn_Click(object sender, RoutedEventArgs e)
         {
-            var openFileDialog = new OpenFileDialog();
-
-            openFileDialog.Filter = "Image Files (*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
-
-            var result = openFileDialog.ShowDialog();
-
-            if (result == true)
+            using (var httpClient = new HttpClient())
             {
-                var selectedFile = openFileDialog.FileName;
-                var fileStream = new FileStream(selectedFile, FileMode.Open, FileAccess.Read);
-                var content = new StreamContent(fileStream);
-
-                var httpClient = new HttpClient();
-
-                MessageBox.Show(content.ToString());
-
-                httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
-                var response = await httpClient.PostAsync("https://intermodular.fadedbytes.com/image", content);
-                MessageBox.Show(response.ToString());
-
-                if (response.IsSuccessStatusCode)
+                using (var content = new MultipartFormDataContent())
                 {
-                    MessageBox.Show("Imagen subida.");
-                }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido un error en la carga de la imagen.");
+                    var openFileDialog = new OpenFileDialog();
+                    if (openFileDialog.ShowDialog() == true)
+                    {
+                        var fileContent = new ByteArrayContent(File.ReadAllBytes(openFileDialog.FileName));
+                        content.Add(fileContent);
+
+                        httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
+                        var response = await httpClient.PostAsync("https://intermodular.fadedbytes.com/image", content);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            var responseContent = await response.Content.ReadAsStringAsync();
+                            MessageBox.Show("Imagen subida correctamente.");
+                        }
+                        else
+                        {
+                            var errorMessage = await response.Content.ReadAsStringAsync();
+                            MessageBox.Show("Ocurrió un error durante la carga.");
+                        }
+                    }                   
                 }
             }
         }
@@ -127,6 +107,21 @@ namespace TestApp_Intermodular
                     ColumnB.Children.Add(grid);
                     cont++;
                 }
+            }
+        }
+
+        private async void DeleteRoute(String i)
+        {
+            string url = "https://intermodular.fadedbytes.com/api/v1/route/" + i;
+
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
+                HttpResponseMessage response = await client.DeleteAsync(url);
+                MessageBox.Show(response.ToString());
+
+                if (response.IsSuccessStatusCode) { MessageBox.Show("Ruta eliminada con éxito."); }
+                else { MessageBox.Show("Ha ocurrido algún error, por favor, ponte en contacto con soporte."); }
             }
         }
     }

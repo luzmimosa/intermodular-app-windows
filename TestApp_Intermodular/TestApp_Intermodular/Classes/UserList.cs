@@ -134,7 +134,7 @@ namespace TestApp_Intermodular.Classes
             }
         }
 
-        private async void ModifyUser(String i) 
+        private async Task<string> ModifyUser(String i) 
         {
             using (var client = new HttpClient())
             {
@@ -145,13 +145,12 @@ namespace TestApp_Intermodular.Classes
                     displayName = this.DisplayName,
                 };
                 var content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
-                MessageBox.Show(content.ToString());
-                MessageBox.Show("https://intermodular.fadedbytes.com/account/modify/" + i);
-
                 
                 var response = await client.PostAsync("https://intermodular.fadedbytes.com/account/modify/"+i, content);
 
                 MessageBox.Show(response.ToString());
+                MessageBox.Show("Cambios aplicados con éxito.");
+                return await response.Content.ReadAsStringAsync();
             }
         }
     }
