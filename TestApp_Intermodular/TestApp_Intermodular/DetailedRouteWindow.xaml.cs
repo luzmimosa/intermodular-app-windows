@@ -117,7 +117,6 @@ namespace TestApp_Intermodular
             for (int i = 0; i < number; i++)
             {
                 Grid grid = Commentary.CommentGrid();
-                //StackPanel grid = UserList.DisplayList();
                 if (cont % 2 == 0)
                 {
                     ColumnA.Children.Add(grid);

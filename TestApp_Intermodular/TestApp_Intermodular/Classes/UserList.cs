@@ -70,7 +70,7 @@ namespace TestApp_Intermodular.Classes
             deleteButton.HorizontalAlignment = HorizontalAlignment.Left;
             deleteButton.Click += (sender, e) =>
             {
-                DeleteUser(this.DisplayName);
+                DeleteUser(this.Username);
             };
 
             var saveButton = new Button();
@@ -82,8 +82,7 @@ namespace TestApp_Intermodular.Classes
             saveButton.HorizontalAlignment = HorizontalAlignment.Left;
             saveButton.Click += (sender, e) =>
             {
-                var textBox1Contents = textBox1.Text;
-                var textBox2Contents = textBox2.Text;
+                ModifyUser(this.Username);
             };
 
             modifyButton.Click += (sender, e) =>
@@ -130,14 +129,29 @@ namespace TestApp_Intermodular.Classes
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
                 HttpResponseMessage response = await client.DeleteAsync(url);
 
-                if (response.IsSuccessStatusCode)
+                if (response.IsSuccessStatusCode){MessageBox.Show("Usuario eliminado con éxito.");}
+                else{MessageBox.Show("Ha ocurrido algún error, por favor, ponte en contacto con soporte.");}
+            }
+        }
+
+        private async void ModifyUser(String i) 
+        {
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
+                var data = new
                 {
-                    MessageBox.Show("Usuario eliminado con éxito.");
-                }
-                else
-                {
-                    MessageBox.Show("Ha ocurrido algún error, por favor, ponte en contacto con soporte.");
-                }
+                    username = this.Username,
+                    displayName = this.DisplayName,
+                };
+                var content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
+                MessageBox.Show(content.ToString());
+                MessageBox.Show("https://intermodular.fadedbytes.com/account/modify/" + i);
+
+                
+                var response = await client.PostAsync("https://intermodular.fadedbytes.com/account/modify/"+i, content);
+
+                MessageBox.Show(response.ToString());
             }
         }
     }

@@ -77,7 +77,7 @@
                              Height="50"
                              Foreground="Black"
                              FontSize="14"
-                             Visibility="Visible"
+                             Visibility="Collapsed"
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding AdminViewCommand}"/>
 
@@ -126,15 +126,7 @@
                     VerticalAlignment="Top"
                     HorizontalAlignment="Right"
                     Margin="0,5,20,0"/>
-
-            <TextBox Width="250"
-                     Height="40"
-                     VerticalContentAlignment="Center"
-                     HorizontalAlignment="Left"
-                     Margin="5"
-                     Grid.Column="1"
-                     Style="{StaticResource ModerntextBox}"/>
-
+            
             <ContentControl Grid.Row="1"
                             Grid.Column="1"
                             Margin="10"

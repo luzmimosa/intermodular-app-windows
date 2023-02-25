@@ -24,12 +24,16 @@ namespace TestApp_Intermodular.MVVM.View
     /// </summary>
     public partial class ProfileView : UserControl
     {
-        static String usuario, nombre, biografia;
+        static String nombre, biografia;
         private bool _enabled = false;
         public ProfileView()
         {
-            InitializeComponent();
+
+            InitializeComponent();          
             AssignUserValues();
+
+            nombre = NameTextBox.Text;
+            biografia = BiographyTextBox.Text;
         }
         private void ImageBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -46,7 +50,6 @@ namespace TestApp_Intermodular.MVVM.View
         {
             BioDescriptionTextBlock.Text = BiographyTextBox.Text;
             NameTextBlock.Text = NameTextBox.Text;
-            UserTextBlock.Text = UserTextBox.Text;
 
             _enabled = !_enabled;
 
@@ -58,9 +61,7 @@ namespace TestApp_Intermodular.MVVM.View
             NameTextBox.Visibility = Visibility.Collapsed;
 
             UserTextBlock.Visibility = Visibility.Visible;
-            UserTextBox.Visibility = Visibility.Collapsed;
 
-            usuario = UserTextBlock.Text;
             nombre= NameTextBox.Text;
             biografia = BioDescriptionTextBlock.Text;
             ModifyUserAsync();
@@ -71,18 +72,16 @@ namespace TestApp_Intermodular.MVVM.View
         {
             using (var client = new HttpClient())
             {
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
                 var data = new
                 {
-                    username = usuario,
                     displayName = nombre,
                     biography = biografia
                 };
                 var content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
 
-                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
+                
                 var response = await client.PostAsync("https://intermodular.fadedbytes.com/account/modify", content);
-
-                MessageBox.Show(response.ToString());
                 return await response.Content.ReadAsStringAsync();
             }
         }
@@ -98,9 +97,6 @@ namespace TestApp_Intermodular.MVVM.View
 
                 NameTextBlock.Visibility = Visibility.Collapsed;
                 NameTextBox.Visibility = Visibility.Visible;
-
-                UserTextBlock.Visibility = Visibility.Collapsed;
-                UserTextBox.Visibility = Visibility.Visible;
             }
             else 
             {
@@ -110,9 +106,6 @@ namespace TestApp_Intermodular.MVVM.View
 
                 NameTextBlock.Visibility = Visibility.Visible;
                 NameTextBox.Visibility = Visibility.Collapsed;
-
-                UserTextBlock.Visibility = Visibility.Visible;
-                UserTextBox.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -121,10 +114,11 @@ namespace TestApp_Intermodular.MVVM.View
         {
             var httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
-            var response = await httpClient.GetAsync("https://intermodular.fadedbytes.com/api/v1/user/" + CurrentUser.username);
 
+            var response = await httpClient.GetAsync("https://intermodular.fadedbytes.com/api/v1/user/" + CurrentUser.username);
             var json = await response.Content.ReadAsStringAsync();
             var user = JsonConvert.DeserializeObject<User>(json);
+
             return user;
         }
 
@@ -135,7 +129,6 @@ namespace TestApp_Intermodular.MVVM.View
             NameTextBlock.Text = currentUser.displayName;
             NameTextBox.Text = currentUser.displayName;
             UserTextBlock.Text = currentUser.username;
-            UserTextBox.Text = currentUser.username;
             BioDescriptionTextBlock.Text = currentUser.biography;
             BiographyTextBox.Text = currentUser.biography;
         }

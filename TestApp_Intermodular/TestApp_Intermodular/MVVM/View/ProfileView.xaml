@@ -45,13 +45,6 @@
                 Text="Aquí va el usuario"
                  FontSize="18"/>
 
-            <TextBox x:Name="UserTextBox" 
-                 VerticalAlignment="Center" 
-                 HorizontalAlignment="Left"
-                 MinWidth="200"
-                 Margin="5,5,0,0"
-                 Visibility="Collapsed"/>
-
             <TextBlock x:Name="BioTextBlock"
                 Text="Biografía"
                 Margin="0,5,0,2"

@@ -29,6 +29,9 @@ namespace TestApp_Intermodular
         {
             InitializeComponent();
             welcome.Text = "Bienvenido, "+CurrentUser.username+".";
+
+            if (CurrentUser.username.Equals("goose")) 
+            { Administrador.Visibility = Visibility.Visible; }
             
         }
 

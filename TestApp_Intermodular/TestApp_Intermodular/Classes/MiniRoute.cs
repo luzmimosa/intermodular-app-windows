@@ -102,7 +102,6 @@ namespace TestApp_Intermodular.Classes
                 DetailedRoute.RouteDistanceTextBox.Text = this.Length.ToString()+"Km";
                 DetailedRoute.RouteDifficultyTextBox.Text = "Dificultad: "+this.difficulty;
                 DetailedRoute.RouteAuthorTextBox.Text = "Autor: " + this.creator;
-                DetailedRoute.RouteCreationDateTextBox.Text = "Fecha: " + this.creationDay + "/" + this.creationMonth + "/" + this.creationYear;
                 DetailedRoute.ShowDialog();              
 
             }
