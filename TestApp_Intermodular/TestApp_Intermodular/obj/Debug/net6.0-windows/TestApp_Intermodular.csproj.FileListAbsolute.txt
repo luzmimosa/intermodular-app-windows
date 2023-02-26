@@ -386,3 +386,8 @@ C:\Users\sergi\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodu
 C:\Users\sergi\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\DetailedRouteWindow.baml
 C:\Users\sergi\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\AdminView.g.cs
 C:\Users\sergi\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\AdminView.baml
+C:\Users\pauet\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\DetailedRouteWindow.g.cs
+C:\Users\pauet\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\AdminView.g.cs
+C:\Users\pauet\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\DetailedRouteWindow.baml
+C:\Users\pauet\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\obj\Debug\net6.0-windows\MVVM\View\AdminView.baml
+C:\Users\pauet\Source\Repos\luzmimosa\intermodular-app-windows\TestApp_Intermodular\TestApp_Intermodular\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

@@ -65,13 +65,15 @@ namespace TestApp_Intermodular
         {
             using (var httpClient = new HttpClient())
             {
-                using (var content = new MultipartFormDataContent())
+                using (var content = new MultipartFormDataContent("image"))
                 {
                     var openFileDialog = new OpenFileDialog();
                     if (openFileDialog.ShowDialog() == true)
                     {
-                        var fileContent = new ByteArrayContent(File.ReadAllBytes(openFileDialog.FileName));
-                        content.Add(fileContent);
+
+                        var imageContent = new ByteArrayContent(File.ReadAllBytes(openFileDialog.FileName));
+                        imageContent.Headers.ContentType = MediaTypeHeaderValue.Parse("image/jpeg");
+                        content.Add(imageContent, "image", "image.jpeg");
 
                         httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
                         var response = await httpClient.PostAsync("https://intermodular.fadedbytes.com/image", content);
@@ -80,11 +82,13 @@ namespace TestApp_Intermodular
                         {
                             var responseContent = await response.Content.ReadAsStringAsync();
                             MessageBox.Show("Imagen subida correctamente.");
+                            MessageBox.Show(await response.Content.ReadAsStringAsync());
                         }
                         else
                         {
                             var errorMessage = await response.Content.ReadAsStringAsync();
                             MessageBox.Show("Ocurrió un error durante la carga.");
+                            MessageBox.Show(response.StatusCode  + " - " + await response.Content.ReadAsStringAsync());
                         }
                     }                   
                 }
