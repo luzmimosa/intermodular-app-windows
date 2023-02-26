@@ -118,7 +118,6 @@ namespace TestApp_Intermodular
             {
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
                 HttpResponseMessage response = await client.DeleteAsync(url);
-                MessageBox.Show(response.ToString());
 
                 if (response.IsSuccessStatusCode) { MessageBox.Show("Ruta eliminada con éxito."); }
                 else { MessageBox.Show("Ha ocurrido algún error, por favor, ponte en contacto con soporte."); }

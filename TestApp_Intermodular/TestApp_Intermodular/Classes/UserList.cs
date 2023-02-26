@@ -149,7 +149,6 @@ namespace TestApp_Intermodular.Classes
                 var response = await client.PostAsync("https://intermodular.fadedbytes.com/account/modify/"+i, content);
 
                 MessageBox.Show(response.ToString());
-                MessageBox.Show("Cambios aplicados con éxito.");
                 return await response.Content.ReadAsStringAsync();
             }
         }
