@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TestApp_Intermodular",
+    "\\TestApp_Intermodular\\TestApp_Intermodular",
+    "\\TestApp_Intermodular\\TestApp_Intermodular\\Classes",
+    "\\TestApp_Intermodular\\TestApp_Intermodular\\MVVM",
+    "\\TestApp_Intermodular\\TestApp_Intermodular\\MVVM\\View"
   ],
+  "SelectedNode": "\\TestApp_Intermodular\\TestApp_Intermodular\\LoginWindows.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

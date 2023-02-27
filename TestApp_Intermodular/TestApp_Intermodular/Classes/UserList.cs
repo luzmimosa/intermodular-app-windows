@@ -16,7 +16,9 @@ namespace TestApp_Intermodular.Classes
     public class UserList 
     {
         public string Username { get; set; }
+        public string NewUser { get; set; }
         public string DisplayName { get; set; }
+        public string NewName { get; set; }
 
         public StackPanel DisplayList()
         {
@@ -28,9 +30,20 @@ namespace TestApp_Intermodular.Classes
             {
                 Orientation = Orientation.Horizontal,
                 Height = 50,
-                Background = new SolidColorBrush(Color.FromRgb(0x10, 0xa7, 0x4f)),
+                Background = new SolidColorBrush(Color.FromRgb(22, 138, 173)),
                 Margin = new Thickness(5)
             };
+            var textBlock1 = new TextBlock();
+            textBlock1.Text = "Nombre: ";
+            textBlock1.Margin = new Thickness(5, 0, 0, 0);
+            textBlock1.Foreground = new SolidColorBrush(Color.FromRgb(0,0, 0));
+            textBlock1.VerticalAlignment= VerticalAlignment.Center;
+
+            var textBlock2 = new TextBlock();
+            textBlock2.Text = "Usuario: ";
+            textBlock2.Margin= new Thickness(5,0,0,0);
+            textBlock2.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+            textBlock2.VerticalAlignment = VerticalAlignment.Center;
 
             var textBox1 = new TextBox();
             textBox1.Text = (dynamic)DisplayName;
@@ -58,8 +71,10 @@ namespace TestApp_Intermodular.Classes
             modifyButton.Width = 100;
             modifyButton.Content = "Modificar usuario";
             modifyButton.Margin = new Thickness(2);
+            modifyButton.Background = new SolidColorBrush(Color.FromRgb(153, 217, 140));
             modifyButton.HorizontalAlignment = HorizontalAlignment.Left;
-            
+            modifyButton.Foreground=new SolidColorBrush(Color.FromRgb(0, 0, 0));
+
 
             var deleteButton = new Button();
             deleteButton.Height = 30;
@@ -68,8 +83,10 @@ namespace TestApp_Intermodular.Classes
             deleteButton.IsEnabled = false;
             deleteButton.Margin = new Thickness(2);
             deleteButton.HorizontalAlignment = HorizontalAlignment.Left;
+            deleteButton.Foreground = disabledBackground;
             deleteButton.Click += (sender, e) =>
             {
+                
                 DeleteUser(this.Username);
             };
 
@@ -80,8 +97,11 @@ namespace TestApp_Intermodular.Classes
             saveButton.IsEnabled = false;
             saveButton.Margin = new Thickness(2);
             saveButton.HorizontalAlignment = HorizontalAlignment.Left;
+            saveButton.Foreground = disabledBackground;
             saveButton.Click += (sender, e) =>
             {
+                this.NewUser = textBox2.Text;
+                this.NewName = textBox1.Text;
                 ModifyUser(this.Username);
             };
 
@@ -94,12 +114,17 @@ namespace TestApp_Intermodular.Classes
                 {
                     textBox1.Foreground = enabledBackground;
                     textBox2.Foreground = enabledBackground;
-                    deleteButton.Background = new SolidColorBrush(Color.FromRgb(236, 112, 99));
+                    deleteButton.Background = new SolidColorBrush(Color.FromRgb(52, 160, 164));
+                    deleteButton.Foreground = enabledBackground;
+                    saveButton.Background = new SolidColorBrush(Color.FromRgb(181, 228, 140));
+                    saveButton.Foreground = enabledBackground;
                 }
                 else 
                 {
                     textBox1.Foreground = disabledBackground;
                     textBox2.Foreground = disabledBackground;
+                    deleteButton.Foreground = disabledBackground;
+                    saveButton.Foreground = disabledBackground;
                 }
                 
 
@@ -112,7 +137,9 @@ namespace TestApp_Intermodular.Classes
                 _is = !_is;
             };
 
+            stackPanel.Children.Add(textBlock1);
             stackPanel.Children.Add(textBox1);
+            stackPanel.Children.Add(textBlock2);
             stackPanel.Children.Add(textBox2);
             stackPanel.Children.Add(modifyButton);
             stackPanel.Children.Add(deleteButton);
@@ -134,22 +161,22 @@ namespace TestApp_Intermodular.Classes
             }
         }
 
-        private async Task<string> ModifyUser(String i) 
+        private async /*Task<string>*/ void ModifyUser(String i) 
         {
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + GlobalToken.Token);
                 var data = new
                 {
-                    username = this.Username,
-                    displayName = this.DisplayName,
+                    username = this.NewUser,
+                    displayName = this.NewName,
                 };
                 var content = new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
                 
                 var response = await client.PostAsync("https://intermodular.fadedbytes.com/account/modify/"+i, content);
 
                 MessageBox.Show(response.ToString());
-                return await response.Content.ReadAsStringAsync();
+                //return await response.Content.ReadAsStringAsync();
             }
         }
     }

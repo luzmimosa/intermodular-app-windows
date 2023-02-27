@@ -27,11 +27,12 @@
         <Button x:Name="SaveButton" Content="Guardar" Width="55" Click="SaveBtn_Click" MaxWidth="100" Height="25" Margin="0,5,0,0" Grid.Column="0" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Collapsed"/>
 
 
-        <TextBlock Grid.ColumnSpan="3" Grid.Row="0" Text="Información de usuario" FontSize="24" HorizontalAlignment="Center"/>
+        <TextBlock Grid.ColumnSpan="3" Grid.Row="0" Text="Información de usuario" FontSize="24" HorizontalAlignment="Center" Foreground="Black"/>
 
         <StackPanel Grid.Column="1" Grid.Row="1">
             <TextBlock x:Name="NameTextBlock"
                 Text="Aquí va el nombre de usuario"
+                Foreground="Black"
                 Grid.ColumnSpan="3"
                 FontSize="22"/>
             <TextBox x:Name="NameTextBox" 

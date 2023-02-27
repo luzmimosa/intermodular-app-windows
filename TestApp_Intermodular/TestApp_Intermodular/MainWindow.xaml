@@ -12,14 +12,13 @@
         Width="920"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="Transparent"
         AllowsTransparency="True" WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border Background="#12BA58"
+    <Border Background="#1A759F"
                 CornerRadius="20">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -34,13 +33,13 @@
 
             <StackPanel Grid.Row="1"
                         Grid.ColumnSpan="2"
-                        Background="#f0f2f5"/>
+                        Background="White"/>
 
             <TextBlock Text="WikiHonk"
                        VerticalAlignment="Bottom"
                        HorizontalAlignment="Left"
                        Margin="40,0,0,23"
-                       Foreground="Black"
+                       Foreground="White"
                        FontSize="22"/>
             
             <TextBlock x:Name="welcome"
@@ -102,7 +101,7 @@
 
             <Button Content="-" 
                     Click="MinimizeButton_Click"
-                    Background="#10a74f"
+                    Background="#168AAD"
                     Width="22" 
                     Height="22"                   
                     Grid.Column="1"
@@ -117,7 +116,7 @@
                     VerticalContentAlignment="Center"
                     HorizontalContentAlignment="Center"
                     Click="CloseButton_Click"
-                    Background="#ba5812"
+                    Background="#34A0A4"
                     Width="22"
                     Height="22"
                     Grid.Column="1"

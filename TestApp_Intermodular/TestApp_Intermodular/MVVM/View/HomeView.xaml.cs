@@ -39,7 +39,7 @@ namespace TestApp_Intermodular.MVVM.View
             int cont = 0;
             foreach (var i in ruta) 
             {
-                Grid grid = i.ShowRoutes();
+                Grid grid = await i.ShowRoutes();
                 if (cont % 2 == 0)
                     {
                         ColumnA.Children.Add(grid);
@@ -101,6 +101,7 @@ namespace TestApp_Intermodular.MVVM.View
                     miniRoute.UID = route.uid;
                     miniRoute.difficulty= route.difficulty;
                     miniRoute.creator= route.creator;
+                    miniRoute.image= route.image;
                     RouteList.Add(miniRoute);
 
                 }

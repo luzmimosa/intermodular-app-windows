@@ -27,14 +27,9 @@ namespace TestApp_Intermodular
         public DetailedRouteWindow()
         {
             InitializeComponent();
-            LoadImage();
         }
         private void CloseWindow_Click(object sender, RoutedEventArgs e) {
             this.Close();
-        }
-        private void LoadImage()
-        {
-            
         }
 
         //private void PrevButton_Click(object sender, RoutedEventArgs e)
@@ -94,26 +89,6 @@ namespace TestApp_Intermodular
                 }
             }
         }
-
-        private void DisplayComments(int number)
-        {
-            int cont = 0;
-            for (int i = 0; i < number; i++)
-            {
-                Grid grid = Commentary.CommentGrid();
-                if (cont % 2 == 0)
-                {
-                    ColumnA.Children.Add(grid);
-                    cont++;
-                }
-                else
-                {
-                    ColumnB.Children.Add(grid);
-                    cont++;
-                }
-            }
-        }
-
         private async void DeleteRoute(String i)
         {
             string url = "https://intermodular.fadedbytes.com/api/v1/route/" + i;

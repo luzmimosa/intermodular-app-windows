@@ -49,7 +49,7 @@ namespace TestApp_Intermodular {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "6.0.5.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.1.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -75,7 +75,7 @@ namespace TestApp_Intermodular {
         /// </summary>
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "6.0.5.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.1.0")]
         public static void Main() {
             TestApp_Intermodular.App app = new TestApp_Intermodular.App();
             app.InitializeComponent();

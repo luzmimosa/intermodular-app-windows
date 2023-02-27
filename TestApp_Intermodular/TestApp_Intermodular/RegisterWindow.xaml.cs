@@ -52,14 +52,17 @@ namespace TestApp_Intermodular
                 };
 
                 var data = JsonSerializer.Serialize<Post>(post);
-                HttpContent content =
-                    new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+                HttpContent content = new StringContent(data, Encoding.UTF8, "application/json");
 
                 var httpResponse = await client.PostAsync(url, content);
 
                 if (httpResponse.IsSuccessStatusCode)
                 {
                     var result = await httpResponse.Content.ReadAsStringAsync();
+                    MessageBox.Show("Usuario registrado correctamente.");
+                    LoginWindows lg = new LoginWindows();
+                    this.Close();
+                    lg.Show();
                 }
             }
             else
